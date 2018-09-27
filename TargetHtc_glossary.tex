@@ -1,0 +1,401 @@
+\newglossaryentry{Tmrt}{name={$T_{mrt}$},symbol={\ensuremath{T_{mrt}}},description={mean radiant temperature (\SI{}{\degreeCelsius}}}
+\newglossaryentry{UTCI}{name={$UTCI$},symbol={\ensuremath{UTCI}},description={universal thermal climate index}}
+\newglossaryentry{Tsurf}{name={$T_{surf}$},symbol={\ensuremath{T_{surf}}},description={surface temperature from the force-restore model (\degreeC)}}
+\newglossaryentry{Tg}{name={\ensuremath{T_{g}}},symbol={\ensuremath{T_{g}}},description={globe temperature (K)}}
+\newglossaryentry{Tcan}{name={\ensuremath{T_{can}}},symbol={\ensuremath{T_{can}}},description={canopy air temperature (z < z$_{H}$) (K)}} 
+\newglossaryentry{A}{name={\ensuremath{A}},symbol={\ensuremath{A}},description={surface area of a sphere of diameter $D$, of value 0.15m}}
+\newglossaryentry{D}{name={\ensuremath{D}},symbol={\ensuremath{D}},description={diameter of sphere (m)}}
+\newglossaryentry{Nu}{name={\ensuremath{Nu}},symbol={\ensuremath{Nu}},description={Nusselt number (-)}}
+\newglossaryentry{Re}{name={\ensuremath{Re}},symbol={\ensuremath{Re}},description={Reynolds number (-)}}
+\newglossaryentry{Pr}{name={\ensuremath{Pr}},symbol={\ensuremath{Pr}},description={Prandtl number (-)}}
+\newglossaryentry{k}{name={\ensuremath{k}},symbol={\ensuremath{k}},description={thermal conductivity of the fluid (i.e. air) (W m$^{-1}$ K$^{-1}$)}}
+\newglossaryentry{Tsfc}{name={\ensuremath{T_{sfc}}},symbol={\ensuremath{T_{sfc}}},description={surface temperature (K)}} 
+
+
+
+
+%
+%
+%
+%
+%%\newglossaryentry{E}{name={\ensuremath{E}},symbol={\ensuremath{E}},description={net evapotranspiration}} 
+%\newglossaryentry{culdesac}{name=cul-de-sac,description={passage or street closed at one end}}
+%\newglossaryentry{Tmrt}{name=\ensuremath{T\textsubscript{mrt}},symbol=\ensuremath{T\textsubscript{mrt}},description={mean radiant temperature (\degreeC)}}
+%\newglossaryentry{ohm}{name=ohm,symbol={\ensuremath{\Omega}},description=unit of electrical resistance}
+%\newglossaryentry{kup}{name=\ensuremath{K\uparrow},symbol=\ensuremath{{K\uparrow}},description={upward shortwave radiative flux density (W m$^{-2}$)}}
+%\newglossaryentry{kdown}{name=\ensuremath{K\downarrow},symbol=\ensuremath{{K\downarrow}},description={downward shortwave radiative flux density (W m$^{-2}$)}}
+\newglossaryentry{lup}{name=\ensuremath{L\uparrow},symbol=\ensuremath{{L\uparrow}},description={upward longwave radiative flux density (W m$^{-2}$)}}
+\newglossaryentry{ldown}{name=\ensuremath{L\downarrow},symbol=\ensuremath{{L\downarrow}},description={downward longwave radiative flux density (W m$^{-2}$)}}
+%\newglossaryentry{q*}{name=\ensuremath{Q^{*}},symbol=\ensuremath{{Q^{*}}},description={net radiation flux density (W m$^{-2}$)}}
+%\newglossaryentry{q*pre}{name=\ensuremath{Q^{*}_{pre}},symbol=\ensuremath{{Q^{*}_{pre}}},description={preliminary calculation of net radiation flux density (W m$^{-2}$)}}
+%\newglossaryentry{q*veg}{name=\ensuremath{Q^{*}_{veg}},symbol=\ensuremath{{Q^{*}_{veg}}},description={calculation of vegetation net radiation flux density (W m$^{-2}$)}}
+%\newglossaryentry{qf}{name={\ensuremath{Q\textsubscript{F}}},symbol={\ensuremath{Q\textsubscript{F}}},description={anthropogenic heat (W m$^{-2}$)}}
+%\newglossaryentry{qh}{name={\ensuremath{Q\textsubscript{H}}},symbol={\ensuremath{Q\textsubscript{H}}},description={sensible heat flux (W m$^{-2}$)}}
+%\newglossaryentry{qhveg}{name={\ensuremath{Q\textsubscript{H,veg}}},symbol={\ensuremath{Q\textsubscript{H,veg}}},description={calculation of vegetation sensible heat flux (W m$^{-2}$)}}
+%\newglossaryentry{qe}{name={\ensuremath{Q\textsubscript{E}}},symbol={\ensuremath{Q\textsubscript{E}}},description={latent heat flux (W m$^{-2}$)}}
+%\newglossaryentry{qg}{name={\ensuremath{Q\textsubscript{G}}},symbol={\ensuremath{Q\textsubscript{G}}},description={ground heat storage (W m$^{-2}$)}}
+%\newglossaryentry{qgveg}{name={\ensuremath{Q\textsubscript{G,veg}}},symbol={\ensuremath{Q\textsubscript{G,veg}}},description={calculation of vegetation ground heat storage (W m$^{-2}$)}}
+%\newglossaryentry{qgstreet}{name={\ensuremath{Q\textsubscript{G,street}}},symbol={\ensuremath{Q\textsubscript{G,street}}},description={calculation of street ground heat storage (W m$^{-2}$)}}
+%\newglossaryentry{qeveg}{name={\ensuremath{Q\textsubscript{E,veg}}},symbol={\ensuremath{Q\textsubscript{E,veg}}},description={calculation of vegetation latent heat flux (W m$^{-2}$)}}
+%\newglossaryentry{qemaespa}{name={\ensuremath{Q\textsubscript{E,MAESPA}}},symbol={\ensuremath{Q\textsubscript{E,MAESPA}}},description={MAESPA calculation of vegetation latent heat flux (W m$^{-2}$)}}
+%\newglossaryentry{qgl}{name={\ensuremath{Q\textsubscript{Gl}}},symbol={\ensuremath{Q\textsubscript{Gl}}},description={global radiation (solar + downward thermal) (W m$^{-2}$)}}
+%\newglossaryentry{ql}{name={\ensuremath{Q\textsubscript{L}}},symbol={\ensuremath{Q\textsubscript{L}}},description={longwave radiation (W m$^{-2}$)}}
+%\newglossaryentry{qc}{name={\ensuremath{Q\textsubscript{C}}},symbol={\ensuremath{Q\textsubscript{C}}},description={soil heat transport (to deeper soil layers) (W m$^{-2}$)}}
+%\newglossaryentry{qs}{name={\ensuremath{\Delta Q\textsubscript{S}}},symbol={\ensuremath{\Delta Q\textsubscript{S}}},description={storage heat flux density (volume) (W m$^{-2}$)}}
+%\newglossaryentry{qa}{name={\ensuremath{\Delta Q\textsubscript{A}}},symbol={\ensuremath{\Delta Q\textsubscript{A}}},description={net advective (horizontal air movement) heat flux (W m$^{-2}$)}} 
+%\newglossaryentry{p}{name={\ensuremath{P}},symbol={\ensuremath{P}},description={precipitation (mm)}} 
+%\newglossaryentry{F}{name={\ensuremath{F}},symbol={\ensuremath{F}},description={moisture release by combustion (mm, kg m$^{-2}$s$^{-1}$)}}  
+%\newglossaryentry{I}{name={\ensuremath{I}},symbol={\ensuremath{I}},description={piped water supply per unit horizontal area (mm, kg m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{E}{name={\ensuremath{E}},symbol={\ensuremath{E}},description={evapotranspiration (mm, kg m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{deltar}{name={\ensuremath{\Delta r}},symbol={\ensuremath{\Delta r}},description={net run-off (mm, kg m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{deltaS}{name={\ensuremath{\Delta S}},symbol={\ensuremath{\Delta S}},description={net moisture storage (kg; kg m$^{-3}$s$^{-1}$)}} 
+%\newglossaryentry{deltaA}{name={\ensuremath{\Delta A}},symbol={\ensuremath{\Delta A}},description={net moisture advection (kg; kg m$^{-3}$s$^{-1}$)}}
+%\newglossaryentry{H}{name={\ensuremath{H}},symbol={\ensuremath{H}},description={internal body heat production (W m$^{-2}$)}}
+%\newglossaryentry{Ed}{name={\ensuremath{E\textsubscript{d}}},symbol={\ensuremath{E\textsubscript{d}}},description={heat loss through water evaporation from the skin (W m$^{-2}$)}}
+%\newglossaryentry{Esw}{name={\ensuremath{E\textsubscript{sw}}},symbol={\ensuremath{E\textsubscript{sw}}},description={heat loss through sweating (W m$^{-2}$)}}
+%\newglossaryentry{Ere}{name={\ensuremath{E\textsubscript{re}}},symbol={\ensuremath{E\textsubscript{re}}},description={heat loss through respiration (W m$^{-2}$)}}
+%\newglossaryentry{L}{name={\ensuremath{L}},symbol={\ensuremath{L}},description={dry respiration heat loss (W m$^{-2}$)}}
+%\newglossaryentry{R}{name={\ensuremath{R}},symbol={\ensuremath{R}},description={heat loss by radiation from the surface of a clothed body (W m$^{-2}$)}}
+%\newglossaryentry{C}{name={\ensuremath{C}},symbol={\ensuremath{C}},description={heat loss through convection from the surface of a clothed body (W m$^{-2}$)}}
+%\newglossaryentry{Pa}{name={\ensuremath{P\textsubscript{a}}},symbol={\ensuremath{P\textsubscript{a}}},description={partial vapour pressure (Pa)}}
+\newglossaryentry{Ta}{name={\ensuremath{T\textsubscript{a}}},symbol={\ensuremath{T\textsubscript{a}}},description={dry bulb air temperature (K)}}
+%\newglossaryentry{Tcl}{name={\ensuremath{T\textsubscript{cl}}},symbol={\ensuremath{T\textsubscript{cl}}},description={clothing surface temperature}}
+%\newglossaryentry{PET}{name={\ensuremath{PET}},symbol={\ensuremath{PET}},description={Physiological Equivalent Temperature}}
+%\newglossaryentry{rho}{name={\ensuremath{\rho}},symbol={\ensuremath{\rho}},description={(temperature-dependent) density of air (=1.2 kg m$^{-2}$)}}
+%\newglossaryentry{To}{name={\ensuremath{T_{o}}},symbol={\ensuremath{T_{o}}},description={temperature (K)}}
+%\newglossaryentry{qo}{name={\ensuremath{q_{o}}},symbol={\ensuremath{q_{o}}},description={surface humidity (kg kg$^{-1}$)}}
+%\newglossaryentry{Eo}{name={\ensuremath{E_{o}}},symbol={\ensuremath{E_{o}}},description={surface vapour pressure (Pa)}}
+%\newglossaryentry{rst}{name={\ensuremath{r_{st}}},symbol={\ensuremath{r_{st}}},description={effective surface resistance of the leaves (s m$^{-1}$)}}
+%\newglossaryentry{rsti}{name={\ensuremath{r_{sti}}},symbol={\ensuremath{r_{sti}}},description={effective surface resistance of the leaves of ith area (s m$^{-1}$)}}
+%\newglossaryentry{LAi}{name={\ensuremath{L_{A,i}}},symbol={\ensuremath{L_{A,i}}},description={area of the ith leaf over ground area (m$^{2}$)}}
+%\newglossaryentry{A}{name={\ensuremath{A}},symbol={\ensuremath{A}},description={ground area (m$^{2}$)}}
+%\newglossaryentry{LAI}{name={\ensuremath{LAI}},symbol={\ensuremath{LAI}},description={leaf area index (m$^{2}$ m$^{-2}$)}}
+%\newglossaryentry{aleaf}{name={\ensuremath{A_{leaf}}},symbol={\ensuremath{A_{leaf}}},description={total leaf area (m$^{2}$)}}
+%
+%
+%
+%\newglossaryentry{cair,H}{name={\ensuremath{c_{air,H}}},symbol={\ensuremath{c_{air,H}}},description={average heat capacity per unit plan area of air below z$_{H}$ (J m$^{-2}$K$^{-1}$)}} 
+%\newglossaryentry{C_}{name={\ensuremath{C}},symbol={\ensuremath{C}},description={volumetric heat capacities (J m$^{-3}$K$^{-1}$)}} 
+%\newglossaryentry{ea}{name={\ensuremath{e_{a}}},symbol={\ensuremath{e_{a}}},description={water vapour pressure at z$_{ref}$ (hPa)}} 
+%\newglossaryentry{G}{name={\ensuremath{G}},symbol={\ensuremath{G}},description={conductive heat flux density (W m$^{-2}$)}} 
+%\newglossaryentry{H/W}{name={\ensuremath{H/W}},symbol={\ensuremath{H/W}},description={mean building-height-to-street-width ratio of canyon or regular cube array}} 
+%\newglossaryentry{H-W3D}{name={\ensuremath{H/W3D}},symbol={\ensuremath{H/W3D}},description={mean wall-to-street area ratio of regular cube arrays}} 
+%\newglossaryentry{Hcan}{name={\ensuremath{H_{can}}},symbol={\ensuremath{H_{can}}},description={summed canopy patch convective sensible heat fluxes per canopy plan area (W m$^{-2}$)}} 
+\newglossaryentry{h}{name={\ensuremath{h}},symbol={\ensuremath{h}},description={convective heat transfer coefficient for flow around a sphere (W m$^{-2}$K$^{-1}$)}} 
+%\newglossaryentry{H_}{name={\ensuremath{H}},symbol={\ensuremath{H}},description={convective sensible heat flux density (W m$^{-2}$)}} 
+%\newglossaryentry{htop}{name={\ensuremath{h_{top}}},symbol={\ensuremath{h_{top}}},description={convective heat transfer coefficient between canopy air and boundary layer (W m$^{-2}$K$^{-1}$)}} 
+%\newglossaryentry{Htop}{name={\ensuremath{H_{top}}},symbol={\ensuremath{H_{top}}},description={convective sensible heat flux density between canopy air and boundary layer (W m$^{-2}$)}} 
+%\newglossaryentry{i, j}{name={\ensuremath{i, j}},symbol={\ensuremath{i, j}},description={patch index/number k thermal conductivity,W m$^{-1}$K$^{-1}$}} 
+%\newglossaryentry{K↑}{name={\ensuremath{K↑}},symbol={\ensuremath{K↑}},description={upward shortwave radiative flux density (W m$^{-2}$)}} 
+%\newglossaryentry{K↓dif}{name={\ensuremath{K↓dif}},symbol={\ensuremath{K↓dif}},description={incident diffuse shortwave flux density (W m$^{-2}$)}} 
+%\newglossaryentry{K↓dir}{name={\ensuremath{K↓dir}},symbol={\ensuremath{K↓dir}},description={incident direct shortwave flux density (W m$^{-2}$)}} 
+%\newglossaryentry{K↓i}{name={\ensuremath{K↓i}},symbol={\ensuremath{K↓i}},description={incident shortwave radiative flux density at patch i after multiple reflections (W m$^{-2}$)}} 
+%\newglossaryentry{K↑i}{name={\ensuremath{K↑i}},symbol={\ensuremath{K↑i}},description={reflected shortwave radiative flux density at patch i after multiple reflections (W m$^{-2}$)}} 
+%\newglossaryentry{Lh}{name={\ensuremath{Lh}},symbol={\ensuremath{Lh}},description={forcing height for patch convection,m}} 
+%\newglossaryentry{lp}{name={\ensuremath{l_{p}}},symbol={\ensuremath{l_{p}}},description={length of a patch side (m)}} 
+%\newglossaryentry{LR}{name={\ensuremath{LR}},symbol={\ensuremath{LR}},description={average roof length,m}} 
+%\newglossaryentry{L↑}{name={\ensuremath{L↑}},symbol={\ensuremath{L↑}},description={upward longwave radiative flux density (W m$^{-2}$)}} 
+%\newglossaryentry{L↓}{name={\ensuremath{L↓}},symbol={\ensuremath{L↓}},description={downward longwave flux density from the sky (W m$^{-2}$)}} 
+%\newglossaryentry{L↓i}{name={\ensuremath{L↓i}},symbol={\ensuremath{L↓i}},description={incident longwave flux density at patch i after multiple reflections, W m$^{-2}$}} 
+%\newglossaryentry{m}{name={\ensuremath{m}},symbol={\ensuremath{m}},description={timestep index}} 
+%\newglossaryentry{n}{name={\ensuremath{n}},symbol={\ensuremath{n}},description={total number of patches}}
+%\newglossaryentry{p_}{name={\ensuremath{p}},symbol={\ensuremath{p}},description={number of layers in a patch (conduction)}} 
+%\newglossaryentry{Pa_}{name={\ensuremath{Pa}},symbol={\ensuremath{Pa}},description={atmospheric pressure at zref (hPa)}} 
+%\newglossaryentry{Q∗}{name={\ensuremath{Q∗}},symbol={\ensuremath{Q∗}},description={net radiation flux density (W m$^{-2}$)}} 
+%\newglossaryentry{Qh}{name={\ensuremath{Q_{H}}},symbol={\ensuremath{Q_{H}}},description={convective sensible heat flux density (volume) (W m$^{-2}$)}} 
+%\newglossaryentry{q}{name={\ensuremath{q}},symbol={\ensuremath{q}},description={reflection number}} 
+%\newglossaryentry{Rq}{name={\ensuremath{Rq}},symbol={\ensuremath{Rq}},description={reflected radiative flux density (solar or longwave) at reflection q (W m$^{-2}$)}} 
+%\newglossaryentry{rw}{name={\ensuremath{r_{w}}},symbol={\ensuremath{r_{w}}},description={wall roughness coefficient}} 
+%\newglossaryentry{rwi}{name={\ensuremath{r_{w,i}}},symbol={\ensuremath{r_{w,i}}},description={wall roughness coefficient of patch i}} 
+%\newglossaryentry{Sd}{name={\ensuremath{Sd}},symbol={\ensuremath{Sd}},description={refers to the sub-domain}} 
+%\newglossaryentry{T(z)}{name={\ensuremath{T(z)}},symbol={\ensuremath{T(z)}},description={air temperature at height z (K)}} 
+%\newglossaryentry{Ta_}{name={\ensuremath{T_{a}}},symbol={\ensuremath{T_{a}}},description={air temperature at z$_{ref}$ (K)}} 
+%\newglossaryentry{Tapp}{name={\ensuremath{T_{app}}},symbol={\ensuremath{T_{app}}},description={apparent surface temperature (K)}} 
+%\newglossaryentry{Tb (b = 1, ... ,p)}{name={\ensuremath{Tb (b = 1, ... ,p}},symbol={\ensuremath{Tb (b = 1, ... ,p}},description={substrate layer temperatures (K) }} 
+%\newglossaryentry{Tcan}{name={\ensuremath{T_{can}}},symbol={\ensuremath{T_{can}}},description={canopy air temperature (z < z$_{H}$) (K)}} 
+%\newglossaryentry{TD}{name={\ensuremath{T_{D}}},symbol={\ensuremath{T_{D}}},description={deep-soil temperature (K)}} 
+%\newglossaryentry{TINT}{name={\ensuremath{T_{INT}}},symbol={\ensuremath{T_{INT}}},description={building internal temperature (K)}} 
+%\newglossaryentry{Tlog(z)}{name={\ensuremath{T_{log}(z)}},symbol={\ensuremath{T_{log}(z)}},description={air temperature profile above z$_{H}$ (K)}} 
+%\newglossaryentry{TR}{name={\ensuremath{T_{R}}},symbol={\ensuremath{T_{R}}},description={mean roof surface temperature (K)}} 
+%\newglossaryentry{Tr}{name={\ensuremath{T_{r}}},symbol={\ensuremath{T_{r}}},description={mean road surface temperature (K)}} 
+%\newglossaryentry{Tsfc}{name={\ensuremath{T\textsubscript{sfc}}},symbol={\ensuremath{T\textsubscript{sfc}}},description={surface temperature (K)}} 
+%\newglossaryentry{Tsfci}{name={\ensuremath{T\textsubscript{sfc,i}}},symbol={\ensuremath{T\textsubscript{sfc,i}}},description={surface temperature of patch i (K)}} 
+%\newglossaryentry{Tsfcveg}{name={\ensuremath{T_{sfc,veg}}},symbol={\ensuremath{T_{sfc,veg}}},description={vegetation surface temperature (K)}} 
+%\newglossaryentry{TW}{name={\ensuremath{T_{W}}},symbol={\ensuremath{T_{W}}},description={mean wall surface temperature (K)}} 
+%\newglossaryentry{U(z)}{name={\ensuremath{U(z)}},symbol={\ensuremath{U(z)}},description={wind speed at height z (m s$^{-1}$)}} 
+%\newglossaryentry{Ua}{name={\ensuremath{U_{a}}},symbol={\ensuremath{U_{a}}},description={wind speed at z$_{ref}$ (m s$^{-1}$)}} 
+%\newglossaryentry{Ueff(z)}{name={\ensuremath{U_{eff}(z)}},symbol={\ensuremath{U_{eff}(z)}},description={effective wind speed at height z (m s$^{-1}$)}} 
+%\newglossaryentry{x, y, z}{name={\ensuremath{x, y, z}},symbol={\ensuremath{x, y, z}},description={location in space}} 
+%\newglossaryentry{xL}{name={\ensuremath{x_{L}}},symbol={\ensuremath{x_{L}}},description={building width (m)}} 
+%\newglossaryentry{xW}{name={\ensuremath{x_{W}}},symbol={\ensuremath{x_{W}}},description={canyon (street) width (m)}} 
+%\newglossaryentry{z0h}{name={\ensuremath{z_{0h}}},symbol={\ensuremath{z_{0h}}},description={roughness length for heat (m)}} 
+%\newglossaryentry{z0m}{name={\ensuremath{z_{0m}}},symbol={\ensuremath{z_{0m}}},description={roughness length for momentum (patch) (m)}} 
+%\newglossaryentry{z0}{name={\ensuremath{z_{0}}},symbol={\ensuremath{z_{0}}},description={roughness length (m)}} 
+%\newglossaryentry{z0town}{name={\ensuremath{z_{0town}}},symbol={\ensuremath{z_{0town}}},description={roughness length for momentum (domain) (m)}} 
+%\newglossaryentry{zd}{name={\ensuremath{z_{D}}},symbol={\ensuremath{z_{D}}},description={displacement height (m)}} 
+%\newglossaryentry{zH}{name={\ensuremath{z_{H}}},symbol={\ensuremath{z_{H}}},description={mean building height (m)}} 
+%\newglossaryentry{zh}{name={\ensuremath{z_{H}}},symbol={\ensuremath{z_{H}}},description={measurement height of wind speed (m)}} 
+%\newglossaryentry{zht}{name={\ensuremath{z_{Ht}}},symbol={\ensuremath{z_{Ht}}},description={measurement height of wind speed (m)}} 
+%\newglossaryentry{zpd}{name={\ensuremath{z_{PD}}},symbol={\ensuremath{z_{PD}}},description={zero-plane displacement height (m)}} 
+%\newglossaryentry{z0ht}{name={\ensuremath{z_{0,Ht}}},symbol={\ensuremath{z_{0,Ht}}},description={roughness length (m)}} 
+%
+%
+%
+%\newglossaryentry{z}{name={\ensuremath{z}},symbol={\ensuremath{z}},description={height in the model domain (m)}} 
+%\newglossaryentry{zhorz}{name={\ensuremath{z_{horz}}},symbol={\ensuremath{z_{horz}}},description={height of patch forcing U(z) and T(z) above street level (m)}} 
+%\newglossaryentry{zhorzi}{name={\ensuremath{z_{horz,i}}},symbol={\ensuremath{z_{horz,i}}},description={height of patch forcing U(z) and T(z) above street level of patch i (m)}} 
+%\newglossaryentry{zref}{name={\ensuremath{z_{ref}}},symbol={\ensuremath{z_{ref}}},description={reference height for forcing data (m)}} 
+%\newglossaryentry{alpha}{name={\ensuremath{\alpha}},symbol={\ensuremath{\alpha}},description={shortwave albedo}} 
+%\newglossaryentry{alphar}{name={\ensuremath{\alpha r}},symbol={\ensuremath{\alpha r}},description={shortwave albedo of streets}} 
+%\newglossaryentry{alphaR}{name={\ensuremath{\alpha R}},symbol={\ensuremath{\alpha R}},description={shortwave albedo of roofs}} 
+%\newglossaryentry{alphaW}{name={\ensuremath{\alpha W}},symbol={\ensuremath{\alpha W}},description={shortwave albedo of walls}} 
+% 
+%\newglossaryentry{deltaαD}{name={\ensuremath{\deltaαD}},symbol={\ensuremath{\deltaαD}},description={sub-domain albedo change threshold}} 
+%\newglossaryentry{deltaQs}{name={\ensuremath{\Delta Qs}},symbol={\ensuremath{\Delta Qs}},description={storage heat flux density (volume) (W m$^{-2}$)}} 
+%\newglossaryentry{deltat}{name={\ensuremath{\Delta t}},symbol={\ensuremath{\Delta t}},description={timestep size (s)}} 
+%\newglossaryentry{deltaTcrit}{name={\ensuremath{\Delta Tcrit}},symbol={\ensuremath{\Delta Tcrit}},description={surface temperature change threshold (K)}} 
+%\newglossaryentry{deltax}{name={\ensuremath{\Delta x}},symbol={\ensuremath{\Delta x}},description={layer thickness (m)}} 
+%\newglossaryentry{epsilon}{name={\ensuremath{\epsilon}},symbol={\ensuremath{\epsilon}},description={longwave emissivity}} 
+%\newglossaryentry{epsilonr}{name={\ensuremath{\epsilon r}},symbol={\ensuremath{\epsilon r}},description={longwave emissivity of streets}} 
+%\newglossaryentry{epsilonR}{name={\ensuremath{\epsilon R}},symbol={\ensuremath{\epsilon R}},description={longwave emissivity of roofs}} 
+%\newglossaryentry{epsilonW}{name={\ensuremath{\epsilon W}},symbol={\ensuremath{\epsilon W}},description={longwave emissivity of walls}} 
+%
+%
+%\newglossaryentry{η}{name={\ensuremath{η}},symbol={\ensuremath{η}},description={domain rotation from north (clockwise), ◦}} 
+%\newglossaryentry{lambdac}{name={\ensuremath{\lambda_{c}}},symbol={\ensuremath{\lambda_{c}}},description={complete-to-plan area ratio}} 
+%\newglossaryentry{lambdaf}{name={\ensuremath{\lambda_{f}}},symbol={\ensuremath{\lambda_{f}}},description={frontal-area-to-plan area ratio}} 
+%\newglossaryentry{lambdap}{name={\ensuremath{\lambda_{p}}},symbol={\ensuremath{\lambda_{p}}},description={building-to-plan area ratio}} 
+%\newglossaryentry{lambdapH}{name={\ensuremath{\lambda_{ph}}},symbol={\ensuremath{\lambda_{ph}}},description={building-to-plan area ratio at z$_{H}$}} 
+\newglossaryentry{sigma}{name={\ensuremath{\sigma}},symbol={\ensuremath{\sigma}},description={Stefan-Boltzmann constant (=5.67 $\times$ 10$^{-8}$ W m$^{-2}$K$^{-4}$)}} 
+%\newglossaryentry{ΩINT}{name={\ensuremath{ΩINT}},symbol={\ensuremath{ΩINT}},description={building internal resistance (W m$^{-1}$K$^{-1}$)}} 
+%\newglossaryentry{ψi,external}{name={\ensuremath{ψi,external}},symbol={\ensuremath{ψi,external}},description={view factor from a patch i to external surfaces}} 
+%\newglossaryentry{ψi,j}{name={\ensuremath{ψi,j}},symbol={\ensuremath{ψi,j}},description={view factor from a patch i to a patch j}} 
+%\newglossaryentry{ψi,sky}{name={\ensuremath{ψi,sky}},symbol={\ensuremath{ψi,sky}},description={view factor from a patch i to the sky}} 
+%
+%\newglossaryentry{RA}{name={\ensuremath{R\textsubscript{A}}},symbol={\ensuremath{R\textsubscript{A}}},description={aerodynamic resistance (s m$^{-1}$)}} 
+%\newglossaryentry{RS}{name={\ensuremath{R\textsubscript{S}}},symbol={\ensuremath{R\textsubscript{S}}},description={surface resistance (s m$^{-1}$)}} 
+%
+%\newglossaryentry{deltaQS}{name={\ensuremath{\Delta Q\textsubscript{S}}},symbol={\ensuremath{\Delta Q\textsubscript{S}}},description={storage heat fluxes (W m$^{-2}$)}} 
+%
+%\newglossaryentry{ws}{name={\ensuremath{ws}},symbol={\ensuremath{ws}},description={wind speed (m s$^{-1}$)}} 
+%\newglossaryentry{rh}{name={\ensuremath{RH}},symbol={\ensuremath{RH}},description={relative humidity (\%)}} 
+%\newglossaryentry{epsilonp}{name={\ensuremath{\epsilon _{p}}},symbol={\ensuremath{\epsilon _{p}}},description={emissivity of the human body}} 
+%\newglossaryentry{R_}{name={\ensuremath{R}},symbol={\ensuremath{R}},description={ideal gas constant (=8.314 J mol$^{-1}$K$^{-1}$)}} 
+%\newglossaryentry{T}{name={\ensuremath{T}},symbol={\ensuremath{T}},description={temperature (K)}} 
+%
+%\newglossaryentry{deltaHvap}{name={\ensuremath{\Delta H_{vap}}},symbol={\ensuremath{\Delta H_{vap}}},description={enthalpy of evaporation (=42809 J mol$^{-1}$)}} 
+%
+%
+%\newglossaryentry{Po}{name={\ensuremath{P_{o}}},symbol={\ensuremath{P_{o}}},description={vapour pressure of water at infinite temperature (=7.5152 $\times$ 10$^8$ mb)}} 
+%\newglossaryentry{Sstr}{name={\ensuremath{S_{str}}},symbol={\ensuremath{S_{str}}},description={mean radiant flux density}} 
+%\newglossaryentry{alphak}{name={\ensuremath{\alpha _{k}}},symbol={\ensuremath{\alpha _{k}}},description={absorption coefficient for short-wave radiation}} 
+%\newglossaryentry{Hblt}{name={\ensuremath{H _{blt}}},symbol={\ensuremath{H _{blt}}},description={building height (m)}} 
+%\newglossaryentry{nhts}{name={\ensuremath{n _{hts}}},symbol={\ensuremath{n _{hts}}},description={number of building heights}} 
+%\newglossaryentry{nroofs}{name={\ensuremath{n _{roofs}}},symbol={\ensuremath{n _{roofs}}},description={number of roofs}} 
+%\newglossaryentry{diamstem}{name={\ensuremath{diam _{stem}}},symbol={\ensuremath{diam _{stem}}},description={stem diameter (m)}} 
+%\newglossaryentry{htrunk}{name={\ensuremath{H _{trunk}}},symbol={\ensuremath{H _{trunk}}},description={trunk height (m)}} 
+%\newglossaryentry{hcrown}{name={\ensuremath{H _{crown}}},symbol={\ensuremath{H _{crown}}},description={crown height (m)}} 
+%\newglossaryentry{acanopy}{name={\ensuremath{A _{canopy}}},symbol={\ensuremath{A _{canopy}}},description={canopy area ($m^{2}$)}} 
+%\newglossaryentry{rcrownx}{name={\ensuremath{r _{x,crown}}},symbol={\ensuremath{r _{x,crown}}},description={crown radius in x direction (m)}} 
+%\newglossaryentry{rcrowny}{name={\ensuremath{r _{y,crown}}},symbol={\ensuremath{r _{y,crown}}},description={crown radius in y direction (m)}} 
+%
+%%\newglossaryentry{et}{name={\ensuremath{et}},symbol={\ensuremath{et}},description={evapotranspiration (mm)}} 
+%\newglossaryentry{Amm}{name={\ensuremath{A _{mm}}},symbol={\ensuremath{A _{mm}}},description={2-dimensional tree area (mm$^{2}$)}} 
+%\newglossaryentry{Time}{name={\ensuremath{Time}},symbol={\ensuremath{Time}},description={time (seconds)}} 
+%
+%\newglossaryentry{Atree}{name={\ensuremath{A _{tree}}},symbol={\ensuremath{A _{tree}}},description={2-dimensional tree area (mm$^{2}$)}} 
+%\newglossaryentry{alphaveg}{name={\ensuremath{\alpha _{veg}}},symbol={\ensuremath{\alpha _{veg}}},description={shortwave albedo of vegetation}} 
+%\newglossaryentry{epsilonveg}{name={\ensuremath{\epsilon _{veg}}},symbol={\ensuremath{\epsilon _{veg}}},description={longwave emissivity of vegetation}} 
+%\newglossaryentry{tconv}{name={\ensuremath{T_{conv}}},symbol={\ensuremath{T_{conv}}},description={converging canyon temperature (K)}} 
+%\newglossaryentry{hi}{name={\ensuremath{h_{i}}},symbol={\ensuremath{h_{i}}},description={heat transfer coefficient (W m$^{-2}$K$^{-1}$)}} 
+%\newglossaryentry{k1}{name={\ensuremath{k_{1}}},symbol={\ensuremath{k_{1}}},description={conversion from pressure units to volumetric units}} 
+%\newglossaryentry{T1}{name={\ensuremath{T_{1}}},symbol={\ensuremath{T_{1}}},description={temperature of the shallowest layer (K)}} 
+%\newglossaryentry{Tm}{name={\ensuremath{T_{m}}},symbol={\ensuremath{T_{m}}},description={temperature of the deepest layer (K)}} 
+%\newglossaryentry{UTCI}{name={\ensuremath{UTCI}},symbol={\ensuremath{UTCI}},description={universal thermal climate index}} 
+%\newglossaryentry{ET}{name={\ensuremath{ET}},symbol={\ensuremath{ET}},description={evapotranspiration (mm, kg m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{d}{ name={\ensuremath{d}}, symbol={\ensuremath{d}}, description={index of agreement (0 <= d <= 1)}} 
+%\newglossaryentry{r2}{name={\ensuremath{r^2}},symbol={\ensuremath{r^2}},description={the fraction of variance explained by the model}} 
+%\newglossaryentry{rmse}{name={RMSE},symbol={RMSE},description={root mean square error}}
+%\newglossaryentry{wsud}{name={WSUD},symbol={WSUD},description={water sensitive urban design}}
+%\newglossaryentry{csud}{name={CSUD},symbol={CSUD},description={climate sensitive urban design}}
+%\newglossaryentry{htc}{name={HTC},symbol={HTC},description={human thermal comfort}}
+%\newglossaryentry{PBM}{name={PBM},symbol={PBM},description={process based model}}
+%\newglossaryentry{SEB}{name={SEB},symbol={SEB},description={surface energy balance model}}
+%\newglossaryentry{uhi}{name={UHI},symbol={UHI},description={urban heat island}}
+%\newglossaryentry{ubl}{name={UBL},symbol={UBL},description={urban boundary layer}}
+%\newglossaryentry{PAR}{name={PAR},symbol={PAR},description={photosynthetically active radiation (400 to 700 nm)}}
+%\newglossaryentry{NIR}{name={NIR},symbol={NIR},description={near-infrared radiation (700 nm to 2500 nm)}}
+%\newglossaryentry{IR}{name={IR},symbol={IR},description={infrared radiation (700 nm to 1mm}}
+%
+%\newglossaryentry{An}{name={\ensuremath{A_{n}}},symbol={\ensuremath{A_{n}}},description={leaf net assimilation rate ($\mu$mol m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{gs}{name={\ensuremath{g_{s}}},symbol={\ensuremath{g_{s}}},description={leaf-level stomatal conductance to H$_{2}$O} (mol m$^{-2}$s$^{-1}$)} 
+%\newglossaryentry{gs_}{name={\ensuremath{g_{s}}},symbol={\ensuremath{g_{s}}},description={leaf-level stomatal conductance to CO$_{2}$} (mol m$^{-2}$s$^{-1}$)} 
+%\newglossaryentry{g0}{name={\ensuremath{g_{0}}},symbol={\ensuremath{g_{0}}},description={conductance when \ensuremath{A_{n}} is zero (mol m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{g1}{name={\ensuremath{g_{1}}},symbol={\ensuremath{g_{1}}},description={conductance empirical parameter}} 
+%\newglossaryentry{Cs}{name={\ensuremath{C_{s}}},symbol={\ensuremath{C_{s}}},description={CO$_{2}$ concentration at the leaf surface ($\mu$mol mol$^{-2}$)}}
+%\newglossaryentry{fD}{name={\ensuremath{f(D)}},symbol={\ensuremath{f(D)}},description={function of the leaf-to-air vapour pressure deficit (D)}}
+%
+%\newglossaryentry{Dpa}{name={\ensuremath{D}},symbol={\ensuremath{D}},description={leaf-to-air vapour pressure deficit (Pa)}}
+%\newglossaryentry{D0}{name={\ensuremath{D_{0}}},symbol={\ensuremath{D_{0}}},description={an empirically determined coefficient}}
+%
+%\newglossaryentry{psiL}{name={\ensuremath{\Psi_{L}}},symbol={\ensuremath{\Psi_{L}}},description={leaf water potential (MPa)}}
+%\newglossaryentry{psif}{name={\ensuremath{\Psi_{f}}},symbol={\ensuremath{\Psi_{f}}},description={reference water potential (MPa)}}
+%\newglossaryentry{sf}{name={\ensuremath{s_{f}}},symbol={\ensuremath{s_{f}}},description={steepness of the response of \ensuremath{f\Psi_{L}} to \ensuremath{\Psi_{L}}}}
+%
+%\newglossaryentry{smdeltaA}{name={\ensuremath{\delta{A}}},symbol={\ensuremath{\delta{A}}},description={change in rate of assimilation (mol m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{smdeltaE}{name={\ensuremath{\delta{E}}},symbol={\ensuremath{\delta{E}}},description={change in the rate of transpiration per unit area of leaf (mol m$^{-2}$s$^{-1}$)}}
+%
+%
+%\newglossaryentry{overlineTr}{name={\ensuremath{\overline{T}_{r}}},symbol={\ensuremath{\overline{T}_{r}}},description={mean radiant temperature (K)}}
+%\newglossaryentry{TN}{name={\ensuremath{T_{N}}},symbol={\ensuremath{T_{N}}},description={surface temperature of surface N (K)}}
+%\newglossaryentry{FpN}{name={\ensuremath{F_{p-N}}},symbol={\ensuremath{F_{p-N}}},description={angle factor between a person and surface N}}
+%
+%\newglossaryentry{lambdaE}{name={\ensuremath{\lambda E}},symbol={\ensuremath{\lambda E}},description={total latent heat of vaporation (cal g$^{-1}$) }}
+%\newglossaryentry{DeltaH}{name={\ensuremath{\Delta H}},symbol={\ensuremath{\Delta H}},description={rate of heat supply (cal cm$^{-2}$sec$^{-1}$)}} 
+%\newglossaryentry{rhoC}{name={\ensuremath{\rho c}},symbol={\ensuremath{\rho c}},description={specific heat of air (cal cm$^{-3}$)}} 
+%\newglossaryentry{Delta}{name={\ensuremath{\Delta}},symbol={\ensuremath{\Delta}},description={change of saturation vapour pressure with temperature (mb)}} 
+%\newglossaryentry{E1}{name={\ensuremath{E_{1}}},symbol={\ensuremath{E_{1}}},description={rate of evaporation from a wet surface with temperature $T\prime$}} 
+%\newglossaryentry{E2}{name={\ensuremath{E_{2}}},symbol={\ensuremath{E_{2}}},description={rate of latent heat uptake of water evaporated into saturated air}} 
+%\newglossaryentry{gamma}{name={\ensuremath{\gamma}},symbol={\ensuremath{\gamma}},description={latent heat of water (=2.47 $\times$ 10$^{6}$ J kg$^{-1}$)}} 
+%\newglossaryentry{D}{name={\ensuremath{D}},symbol={\ensuremath{D}},description={wet-bulb depression}} 
+%\newglossaryentry{ra}{name={\ensuremath{r_{a}}},symbol={\ensuremath{r_{a}}},description={time in which 1 cm$^{3}$ of air exchanges heat with 1 cm$^{3}$ of surface}} 
+%\newglossaryentry{esT}{name={\ensuremath{e_{s}(T)}},symbol={\ensuremath{e_{s}(T)}},description={saturation vapour pressure at temperature T (Pa)}} 
+%\newglossaryentry{e}{name={\ensuremath{e}},symbol={\ensuremath{e}},description={vapour pressure (Pa)}} 
+%\newglossaryentry{Ea}{name={\ensuremath{E_{a}}},symbol={\ensuremath{E_{a}}},description={actual evapotranspiration (kg m$^{-2}$s$^{-1}$)}} 
+%\newglossaryentry{DeltaS}{name={\ensuremath{\Delta _{S}}},symbol={\ensuremath{\Delta _{S}}},description={slope of the specific humidity/ temperature curve between the air temperature $T_{D}$ and the surface temperature of the vegetation $T_{s}$ (kg kg$^{-1}$ \degreeC)}} 
+%\newglossaryentry{a}{name={\ensuremath{A}},symbol={\ensuremath{A}},description={available energy given by A = RN - G (W m$^{-2}$)}} 
+%\newglossaryentry{cp}{name={\ensuremath{c_{\rho}}},symbol={\ensuremath{c_{\rho}}},description={specific heat of air at constant pressure (=1.01 $\times$ 10$^{3}$ J kg$^{-1}$ K$^{-1}$)}} 
+%
+%\newglossaryentry{qwtd}{name={\ensuremath{q_{w},T_{d}}},symbol={\ensuremath{q_{w},T_{d}}},description={saturated specific humidity at dry-bulk temperature, T$_{D}$ (kg kg$^{-1}$)}} 
+%\newglossaryentry{qwtdq}{name={\ensuremath{(q_{w},T_{d}-q)}},symbol={\ensuremath{(q_{w},T_{d}-q)}},description={specific humidity deficit (kg kg$^{-1}$)}} 
+%\newglossaryentry{r_a}{name={\ensuremath{r_{a}}},symbol={\ensuremath{r_{a}}},description={aerodynamic resistance to the transport of water vapour from the surface to the reference level z (s m$^{-1}$)}} 
+%\newglossaryentry{r_c}{name={\ensuremath{r_{c}}},symbol={\ensuremath{r_{c}}},description={(Monteith) canopy resistance to the transport of water from some region within or below the evaporating surface to the surface itself, and is expected to be a function of the stomatal resistance of individual leaves. Under wet-canopy conditions rc = 0 (s m$^{-1}$)}} 
+%
+%\newglossaryentry{psiisky}{name={\ensuremath{\Psi_{i,sky}}},symbol={\ensuremath{\Psi_{i,sky}}},description={sky view factor of surface patch i}}
+%\newglossaryentry{psiij}{name={\ensuremath{\Psi_{i,j}}},symbol={\ensuremath{\Psi_{i,j}}},description={view factor from patch i to patch j}}
+%\newglossaryentry{psiexternal}{name={\ensuremath{\Psi_{i,external}}},symbol={\ensuremath{\Psi_{i,external}}},description={view factor from patch i to external surfaces}}
+%\newglossaryentry{ldownsky}{name=\ensuremath{L\downarrow_{sky}},symbol=\ensuremath{{L\downarrow_{sky}}},description={domain-level incoming longwave (W m$^{-2}$)}}
+%\newglossaryentry{kdowndif}{name=\ensuremath{K\downarrow_{dif}},symbol=\ensuremath{{K\downarrow_{dif}}},description={domain-level incoming diffuse shortwave (W m$^{-2}$)}}
+%\newglossaryentry{kdowndir}{name=\ensuremath{K\downarrow_{dir}},symbol=\ensuremath{{K\downarrow_{dir}}},description={domain-level incoming direct shortwave (W m$^{-2}$)}}
+%\newglossaryentry{ldownskyi}{name=\ensuremath{L\downarrow_{i,sky}},symbol=\ensuremath{{L\downarrow_{i,sky}}},description={initial incident sky-derived longwave (W m$^{-2}$)}}
+%\newglossaryentry{kdowndifi}{name=\ensuremath{K\downarrow_{dif,i}},symbol=\ensuremath{{K\downarrow_{dif,i}}},description={initial incident diffuse shortwave (W m$^{-2}$)}}
+%\newglossaryentry{kdowndiri}{name=\ensuremath{K\downarrow_{dir,i}},symbol=\ensuremath{{K\downarrow_{dir,i}}},description={initial incident direct shortwave (W m$^{-2}$)}}
+%\newglossaryentry{phi}{name={\ensuremath{\phi}},symbol={\ensuremath{\phi}},description={solar zenith angle (degrees)}} 
+%\newglossaryentry{δ}{name={\ensuremath{δ}},symbol={\ensuremath{δ}},description={solar azimuth angle (degrees)}}
+%\newglossaryentry{chi}{name={\ensuremath{\chi}},symbol={\ensuremath{\chi}},description={solar zenith angle (degrees)}} 
+%\newglossaryentry{chii}{name={\ensuremath{\chi_{i}}},symbol={\ensuremath{\chi_{i}}},description={angle between patch i's normal vector and the vector pointing in the direction of the sun (degrees)}} 
+%
+%\newglossaryentry{Rqi}{name={\ensuremath{R^{q+1} _{i}}},symbol={\ensuremath{R^{q+1} _{i}}},description={radiation reflected by patch i at reflection q + 1}} 
+%\newglossaryentry{Rqj}{name={\ensuremath{R^{q} _{j}}},symbol={\ensuremath{R^{q} _{j}}},description={radiation reflected by patch j at reflection q}} 
+%\newglossaryentry{alphai}{name={\ensuremath{\alpha _{i}}},symbol={\ensuremath{\alpha _{i}}},description={shortwave albedo of patch i}}  
+%\newglossaryentry{epsiloni}{name={\ensuremath{\epsilon _{i}}},symbol={\ensuremath{\epsilon _{i}}},description={longwave emissivity of patch i}}  
+%\newglossaryentry{psiji}{name={\ensuremath{\Psi_{j,i}}},symbol={\ensuremath{\Psi_{j,i}}},description={view factor from patch j to patch i}}
+%
+%\newglossaryentry{Tb}{name={\ensuremath{T_{b}}},symbol={\ensuremath{T_{b}}},description={temperature of layer b (K)}}
+%\newglossaryentry{Cb}{name={\ensuremath{C_{b}}},symbol={\ensuremath{C_{b}}},description={volumetric heat capacity of layer b (J m$^{-2}$K$^{-1}$)}}
+%\newglossaryentry{Deltaxb}{name={\ensuremath{\Delta x_{b}}},symbol={\ensuremath{\Delta x_{b}}},description={depth of layer b (m)}}
+%\newglossaryentry{gammac}{name={\ensuremath{\gamma}},symbol={\ensuremath{\gamma}},description={degree of implicitness (conduction) (i.e. $\gamma$ = 0 is explicit, $\gamma$ = 1 is implicit)}} 
+%\newglossaryentry{Gmbb}{name={\ensuremath{G^{m} _{b,b+1}}},symbol={\ensuremath{G^{m} _{b,b+1}}},description={conductive heat flux between layers b and b + 1 at timestep m (W m$^{-2}$)}}
+%\newglossaryentry{F1}{name={\ensuremath{F_{1}}},symbol={\ensuremath{F_{1}}},description={total-area fraction of irradiated leaves on a branch}}
+%\newglossaryentry{Hm}{name={\ensuremath{H}},symbol={\ensuremath{H}},description={tree height (m)}}
+%\newglossaryentry{RprimeH}{name={\ensuremath{R^{\prime}(h)}},symbol={\ensuremath{R^{\prime}(h)}},description={crown radius at the relative crown height h (m)}}
+%\newglossaryentry{hm}{name={\ensuremath{h}},symbol={\ensuremath{h}},description={relative height within the tree crown or the canopy}}
+%\newglossaryentry{Bi}{name={\ensuremath{B_{i}}},symbol={\ensuremath{B_{i}}},description={parameters in the leaf area density distributions within the tree crown or canopy (i=1, 2, and 3 for vertical distribution and 4, 5, and 6 for horizontal distribution)}}
+%\newglossaryentry{r}{name={\ensuremath{r}},symbol={\ensuremath{r}},description={horizontal distance from the centre of the tree trunk (m)}}
+%\newglossaryentry{Ld}{name={\ensuremath{L_{d}}},symbol={\ensuremath{L_{d}}},description={relative leaf area density within the tree crown (m$^{-1}$)}}
+%\newglossaryentry{gB}{name={\ensuremath{g_{B}}},symbol={\ensuremath{g_{B}}},description={boundary layer conductance (mol m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{gV}{name={\ensuremath{g_{V}}},symbol={\ensuremath{g_{V}}},description={total conductance to water vapour (mol m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{gC}{name={\ensuremath{g_{C}}},symbol={\ensuremath{g_{c}}},description={canopy conductance (mol m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{kv}{name={\ensuremath{k_{V}}},symbol={\ensuremath{k_{V}}},description={von Karman's constant}}
+%\newglossaryentry{uZ}{name={\ensuremath{u_{z}}},symbol={\ensuremath{u_{z}}},description={wind speed measured at a height of z$_{H}$ (m s$^{-1}$)}}
+%\newglossaryentry{c}{name={\ensuremath{c}},symbol={\ensuremath{c}},description={conversion to molar units}}
+%\newglossaryentry{EL}{name={\ensuremath{E_{L}}},symbol={\ensuremath{E_{L}}},description={leaf level transpiration rate ($\mu$mol m$^{-2}$s$^{-1}$)}}
+%
+%\newglossaryentry{Si}{name={\ensuremath{S_{i}}},symbol={\ensuremath{S_{i}}},description={soil water storage in layer i (mm)}}
+%\newglossaryentry{Di}{name={\ensuremath{D_{i}}},symbol={\ensuremath{D_{i}}},description={drainage out of layer i (mm)}}
+%\newglossaryentry{Di1}{name={\ensuremath{D_{i-1}}},symbol={\ensuremath{D_{i-1}}},description={NOT USED}}
+%\newglossaryentry{Ei}{name={\ensuremath{E_{i}}},symbol={\ensuremath{E_{i}}},description={root water uptake (canopy transpiration) out of layer i (mm)}}
+%\newglossaryentry{Esi}{name={\ensuremath{E_{s,i}}},symbol={\ensuremath{E_{s,i}}},description={soil evaporation out of layer i (mm)}}
+%\newglossaryentry{Es}{name={\ensuremath{E_{s}}},symbol={\ensuremath{E_{s}}},description={rate of evaporation (mm)}}
+%\newglossaryentry{Ii}{name={\ensuremath{I_{i}}},symbol={\ensuremath{I_{i}}},description={infiltration into layer i (mm)}}
+%\newglossaryentry{Z}{name={\ensuremath{Z}},symbol={\ensuremath{Z}},description={total soil depth (m)}}
+%\newglossaryentry{zi}{name={\ensuremath{z_{i}}},symbol={\ensuremath{z_{i}}},description={depth to the bottom of layer i (m)}}
+%\newglossaryentry{phiinf}{name={\ensuremath{\phi}},symbol={\ensuremath{\phi}},description={infiltration parameter (0-1)}} 
+%\newglossaryentry{Pu}{name={\ensuremath{P_{u}}},symbol={\ensuremath{P_{u}}},description={surface water for infiltration (snow melt + throughfall) (mm)}}
+%\newglossaryentry{FR}{name={\ensuremath{F_{R}}},symbol={\ensuremath{F_{R}}},description={cumulative fraction of fine roots to depth z (m)}}
+%\newglossaryentry{beta}{name={\ensuremath{\beta}},symbol={\ensuremath{\beta}},description={parameter which specifies the shape of the distribution}}
+%\newglossaryentry{psisi}{name={\ensuremath{\Psi_{S,i}}},symbol={\ensuremath{\Psi_{S,i}}},description={soil water potential in layer i (MPa)}}
+%\newglossaryentry{psiri}{name={\ensuremath{\Psi_{R,i}}},symbol={\ensuremath{\Psi_{R,i}}},description={root xylem water potential in layer i (MPa)}}
+%\newglossaryentry{psiR}{name={\ensuremath{\overline{\Psi_{R}}}},symbol={\ensuremath{\overline{\Psi_{R}}}},description={mean root water potential (MPa)}}
+%\newglossaryentry{Rsri}{name={\ensuremath{R_{sr,i}}},symbol={\ensuremath{R_{sr,i}}},description={soil-to root surface hydraulic resistance (MPa s m$^{2}$  mol$^{-1}$)}}
+%\newglossaryentry{Rsrt}{name={\ensuremath{R_{sr,t}}},symbol={\ensuremath{R_{sr,t}}},description={total hydraulic resistance for all soil layers combined (MPa s m$^{2}$ mol$^{-1}$)}}
+%\newglossaryentry{Rradi}{name={\ensuremath{R_{rad,i}}},symbol={\ensuremath{R_{rad,i}}},description={radial resistance to water uptake (across the root epidermis to the xylem) (MPa s m$^{2}$ mol$^{-1}$)}}
+%\newglossaryentry{Rlgi}{name={\ensuremath{R_{lg,i}}},symbol={\ensuremath{R_{lg,i}}},description={longitudinal resistance to water flow (MPa s m$^{2}$ mol$^{-1}$)}}
+%\newglossaryentry{Lvi}{name={\ensuremath{L_{v,i}}},symbol={\ensuremath{L_{v,i}}},description={fine root density (mm$^{-3}$) in layer i}}
+%\newglossaryentry{Gst}{name={\ensuremath{G_{s,t}}},symbol={\ensuremath{G_{s,t}}},description={total conductance from the soil air space to the air above the boundary layer (m s$^{-1}$)}}
+%\newglossaryentry{Eak}{name={\ensuremath{e_{a}}},symbol={\ensuremath{e_{a}}},description={partial water vapour pressure of the air (KPa)}}
+%\newglossaryentry{es}{name={\ensuremath{e_{s}}},symbol={\ensuremath{e_{s}}},description={partial water vapour pressure of the soil pore space (KPa)}}
+%\newglossaryentry{Gws}{name={\ensuremath{G_{ws}}},symbol={\ensuremath{G_{ws}}},description={conductance of water vapour through the soil pore space (m s$^{-1}$)}}
+%\newglossaryentry{Deff}{name={\ensuremath{D_{eff}}},symbol={\ensuremath{D_{eff}}},description={effective diffusivity of the soil pore space (m$^{2}$ s$^{-1}$)}}
+%\newglossaryentry{ld}{name={\ensuremath{L_{d}}},symbol={\ensuremath{L_{d}}},description={thickness of the dry layer at the soil surface (m)}}
+%\newglossaryentry{thetai}{name={\ensuremath{\theta_{i}}},symbol={\ensuremath{\theta_{i}}},description={soil volumetric water content of the dry layer at the soil surface (m$^{3}$ m$^{-3}$)}}
+%\newglossaryentry{theta1}{name={\ensuremath{\theta_{1}}},symbol={\ensuremath{\theta_{1}}},description={soil volumetric water content of layer 1 (m$^{3}$ m$^{-3}$)}}
+%\newglossaryentry{Dw}{name={\ensuremath{D_{w}}},symbol={\ensuremath{D_{w}}},description={diffusivity of water vapour (function of soil temperature) (m$^{2}$ s$^{-1}$)}}
+%\newglossaryentry{omegas}{name={\ensuremath{\omega_{s}}},symbol={\ensuremath{\omega_{s}}},description={tortuosity of the soil air space (-)}}
+%\newglossaryentry{esat}{name={\ensuremath{e_{sat}}},symbol={\ensuremath{e_{sat}}},description={saturated vapour pressure (KPa)}}
+%\newglossaryentry{psis1}{name={\ensuremath{\Psi_{s,1}}},symbol={\ensuremath{\Psi_{s,1}}},description={soil water potential in the surface layer (MPa)}}
+%\newglossaryentry{Vw}{name={\ensuremath{V_{w}}},symbol={\ensuremath{V_{w}}},description={partial molal volume of water (m$_{3}$ mol$^{-1}$)}}
+%\newglossaryentry{Ts}{name={\ensuremath{T_{s}}},symbol={\ensuremath{T_{s}}},description={soil surface temperature (K)}}
+%\newglossaryentry{Wcan}{name={\ensuremath{W_{can}}},symbol={\ensuremath{W_{can}}},description={water storage of the canopy (mm)}}
+%\newglossaryentry{r1}{name={\ensuremath{r_{1}}},symbol={\ensuremath{r_{1}}},description={free throughfall fraction (0-1)}}
+%\newglossaryentry{r2p}{name={\ensuremath{r_{2}}},symbol={\ensuremath{r_{2}}},description={canopy drainage parameter (mm)}}
+%\newglossaryentry{r3}{name={\ensuremath{r_{3}}},symbol={\ensuremath{r_{3}}},description={canopy drainage parameter (-)}}
+%\newglossaryentry{Ew}{name={\ensuremath{E_{w}}},symbol={\ensuremath{E_{w}}},description={wet evaporation rate (mm t$^{-1}$)}}
+%\newglossaryentry{Wi}{name={\ensuremath{W_{i}}},symbol={\ensuremath{W_{i}}},description={water storage of the layer i (mm)}}
+%\newglossaryentry{Ts1}{name={\ensuremath{T\textsubscript{s,1}}},symbol={\ensuremath{T\textsubscript{s,1}}},description={soil surface temperature (K)}} 
+%\newglossaryentry{Ts2}{name={\ensuremath{T\textsubscript{s,2}}},symbol={\ensuremath{T\textsubscript{s,2}}},description={soil temperature at layer 2 (K)}} 
+%\newglossaryentry{deltaz12}{name={\ensuremath{\Delta z_{1,2}}},symbol={\ensuremath{\Delta z_{1,2}}},description={depth difference between the second and first layer (m)}}
+%\newglossaryentry{Kth}{name={\ensuremath{K_{th}}},symbol={\ensuremath{K_{th}}},description={soil thermal conductivity (W m$^{-1}$K$^{-1}$)}}
+%
+%\newglossaryentry{Gam}{name={\ensuremath{G_{a,m}}},symbol={\ensuremath{G_{a,m}}},description={boundary layer conductance to heat transfer (mol m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{Tair}{name={\ensuremath{T_{air}}},symbol={\ensuremath{T_{air}}},description={air temperature (K)}}
+%\newglossaryentry{kP}{name={\ensuremath{k_{P}}},symbol={\ensuremath{k_{P}}},description={plant component of the leaf-specific hydraulic conductance (mmol m$^{-2}$s$^{-1}$MPa$^{-1}$)}}
+%\newglossaryentry{kL}{name={\ensuremath{k_{L}}},symbol={\ensuremath{k_{L}}},description={total leaf-specific hydraulic conductance (mmol m$^{-2}$s$^{-1}$MPa$^{-1}$)}}
+%\newglossaryentry{LT}{name={\ensuremath{L_{T}}},symbol={\ensuremath{L_{T}}},description={total canopy leaf area index (m$^{2}$ m$^{-2}$)}}
+%\newglossaryentry{Wmolw}{name={\ensuremath{m_{mol,w}}},symbol={\ensuremath{m_{mol,w}}},description={molar mass of water (=18.0152g mol$^{-1}$)}}
+%\newglossaryentry{cwkj}{name={\ensuremath{c_{w,kj}}},symbol={\ensuremath{c_{w,kj}}},description={conversion to watts (=1W/1000KJ/sec)}}
+%\newglossaryentry{qeet}{name={\ensuremath{Q\textsubscript{E,et}}},symbol={\ensuremath{Q\textsubscript{E,et}}},description={latent heat flux calculated from $ET$ (W m$^{-2}$)}}
+%
+%\newglossaryentry{qesoil}{name={\ensuremath{Q\textsubscript{E,soil}}},symbol={\ensuremath{Q\textsubscript{E,soil}}},description={latent heat flux calculated from $soilstore$ (W m$^{-2}$)}}
+%\newglossaryentry{qecanopy}{name={\ensuremath{Q\textsubscript{E,canopy}}},symbol={\ensuremath{Q\textsubscript{E,canopy}}},description={latent heat flux calculated from $canopystore$ (W m$^{-2}$)}}
+%\newglossaryentry{qeevap}{name={\ensuremath{Q\textsubscript{E,evap}}},symbol={\ensuremath{Q\textsubscript{E,evap}}},description={latent heat flux calculated from $evapstore$ (W m$^{-2}$)}}
+%\newglossaryentry{Tg}{name={\ensuremath{T_{g}}},symbol={\ensuremath{T_{g}}},description={globe temperature (K)}}
+\newglossaryentry{epsilona}{name={\ensuremath{\epsilon_{a}}},symbol={\ensuremath{\epsilon_{a}}},description={longwave emissivity of the atmosphere}} 
+\newglossaryentry{epsilong}{name={\ensuremath{\epsilon_{g}}},symbol={\ensuremath{\epsilon_{g}}},description={globe emissivity (of value 0.95)}} 
+\newglossaryentry{alphag}{name={\ensuremath{\alpha_{g}}},symbol={\ensuremath{\alpha_{g}}},description={globe albedo (of value 0.05)}} 
+\newglossaryentry{S}{name={\ensuremath{S}},symbol={\ensuremath{S}},description={horizontal solar irradiance (W m$^{-2}$) calculated from the total of absorbed and reflected shortwave}} 
+\newglossaryentry{fdir}{name={\ensuremath{f_{dir}}},symbol={\ensuremath{f_{dir}}},description={fraction of the total horizontal solar irradiance, $S$, due to the direct
+beam of the sun}} 
+\newglossaryentry{alphasfc}{name={\ensuremath{\alpha_{sfc}}},symbol={\ensuremath{\alpha_{sfc}}},description={surface albedo (=0.15)}} 
+\newglossaryentry{theta}{name={\ensuremath{\theta}},symbol={\ensuremath{\theta}},description={solar zenith angle}} 
+\newglossaryentry{epsilonsfc}{name={\ensuremath{\epsilon_{sfc}}},symbol={\ensuremath{\epsilon_{sfc}}},description={surface longwave emissivity of the surfaces}} 
+%\newglossaryentry{A_}{name={\ensuremath{A}},symbol={\ensuremath{A}},description={surface area of a sphere of diameter D, of value 0.15m, (=$\pi 0.15^{2}$m$^{2}$)}}
+%\newglossaryentry{D_}{name={\ensuremath{D}},symbol={\ensuremath{D}},description={diameter of sphere (m)}}
+%\newglossaryentry{Nu}{name={\ensuremath{Nu}},symbol={\ensuremath{Nu}},description={Nusselt number (-)}}
+%\newglossaryentry{Re}{name={\ensuremath{Re}},symbol={\ensuremath{Re}},description={Reynolds number (-)}}
+%\newglossaryentry{Pr}{name={\ensuremath{Pr}},symbol={\ensuremath{Pr}},description={Prandtl number (-)}}
+%\newglossaryentry{k}{name={\ensuremath{k}},symbol={\ensuremath{k}},description={thermal conductivity of the fluid (i.e. air) (W m$^{-1}$ K$^{-1}$)}}
+%\newglossaryentry{S*}{name={\ensuremath{S^{*}}},symbol={\ensuremath{S^{*}}},description={$S^{*} = S/S_{max}$}}
+%\newglossaryentry{Smax}{name={\ensuremath{S_{max}}},symbol={\ensuremath{S_{max}}},description={maximum solar irradiance that would be received in the absence of the atmopshere (W m$^{-2}$)}}
+%\newglossaryentry{S0}{name={\ensuremath{S_{0}}},symbol={\ensuremath{S_{0}}},description={solar constant (=1367 W m$^{-2}$)}}
+%\newglossaryentry{d_}{name={\ensuremath{d}},symbol={\ensuremath{d}},description={earth-sun distance (=1 A.U.)}}
+\newglossaryentry{wsCm}{name={\ensuremath{ws_{cm}}},symbol={\ensuremath{ws_{cm}}},description={wind speed (cm s$^{-1}$)}} 
+
+%\newglossaryentry{tr}{name={\ensuremath{tr}},symbol={\ensuremath{tr}},description={transpiration (mmol H$_{2}$O m$^{-2}$s$^{-1}$)}}
+%\newglossaryentry{Ee}{name={\ensuremath{E_{E}}},symbol={\ensuremath{E_{E}}},description={equivalent evaporation (=2.45 $\times$ 10$^{6}$ J m$^{-2}$h$^{-1}$)}} 
+%\newglossaryentry{PMV}{name={\ensuremath{PMV}},symbol={\ensuremath{PMV}},description={predicted mean vote (PMV)}}
+%\newglossaryentry{e0}{name={\ensuremath{e_{0}}},symbol={\ensuremath{e_{0}}},description={surface vapour pressure (mb)}}
+%
+%
+%\newglossaryentry{aa}{name={\ensuremath{}},symbol={\ensuremath{}},description={}}
+%\newglossaryentry{bb}{name={\ensuremath{}},symbol={\ensuremath{}},description={}}
