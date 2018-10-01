@@ -1,0 +1,32 @@
+Introduction
+-Urban heat, a bad thing
+-CSUD/WSUD proposed for urban cooling
+-TARGET tool
+--What is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
+--What are the economic impacts of this cooling?
+
+Methods
+1) Adding UTCI to TARGET
+1a) add a validation of the UTCI stuff using George/Gipps St.
+2) WSUD scenarios
+3) Climate scenarios
+4) Representative urban portions
+5) Economics
+
+Results
+-UTCI works good
+-Lots of scenario results
+
+Discussion
+- Very little Tair cooling at wide scale.
+- Most effective during cool days
+- Large variations in land classes
+- Cooling very localized, so look at representative portions.
+- Better cooling at this scale
+- Again, best cooling with cool and then average
+- No cooling at night
+- HTC cooling more substantial
+- But also repeats best with cool and average days
+- In economics? What are the results and what does it mean?
+
+Conclusion
