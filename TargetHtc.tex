@@ -171,8 +171,7 @@ The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGE
 
 Calculations for HTC have been added to the TARGET model \citep{Broadbent2018}. Complete descriptions of these calculations are detailed in \cite{Nice2018} but will be described briefly here.
 
-
-VTUF-3D provides output of incoming and outgoing shortwave and longwave radiation and \glssymbol{Tsurf} for each facet (surface) at each timestep. Air temperature for the canyon, \glssymbol{Tcan}, is also provided for each timestep. Using these and values of vapour pressure from the forcing data and wind speed at street level, the values for mean radiant temperature (\glssymbol{Tmrt}) and the human thermal comfort index UTCI are calculated for each surface. User defined options in the model are available to either calculate \glssymbol{ldown}, using the clear sky formula of \cite{Prata1996}, or using forcing values. Based on this, different options will be used to calculate the following equations.
+Using TARGET calculated values of canyon air temperature, \glssymbol{Tcan}, street level wind speed, canyon surface temperatures, \glssymbol{Tsurf}, and upward longwave with forcing values of downward shortwave and longwave and vapour pressure, the values for mean radiant temperature (\glssymbol{Tmrt}) and the human thermal comfort index UTCI are calculated for each grid square.
 
 Calculations of \glssymbol{Tmrt} (\SI{}{\degreeCelsius}) uses a two step procedure. First, globe temperature (\glssymbol{Tg}) is calculated by an iterative relaxation solution, using a formulation of \cite{Liljegren2008} in  
 
@@ -186,15 +185,12 @@ Calculations of \glssymbol{Tmrt} (\SI{}{\degreeCelsius}) uses a two step procedu
 \end{split}
 \end{equation}
 
-
-
-
 where \glssymbol{A}, is the \glsdesc{A},
 \glssymbol{epsilona}, the \glsdesc{epsilona}, 
 \glssymbol{epsilong}, the \glsdesc{epsilong}, 
 \glssymbol{epsilonsfc}, the \glsdesc{epsilonsfc}, 
 \glssymbol{epsilong}, the \glsdesc{epsilong}, 
-\glssymbol{h}, the \glsdesc{h} (see Equation (\ref{eq:h})), 
+\glssymbol{h}, the \glsdesc{h}, 
 \glssymbol{Ta}, the \glsdesc{Ta} (using \glssymbol{Tcan}), 
 \glssymbol{Tsfc}, the surface temperature (K), 
 \glssymbol{S}, the \glsdesc{S}, 
@@ -203,24 +199,6 @@ where \glssymbol{A}, is the \glsdesc{A},
 \glssymbol{alphasfc}, the \glsdesc{alphasfc},  
 \glssymbol{alphag}, the globe albedo (of value 0.05), and 
 \glssymbol{fdir}, the \glsdesc{fdir}. 
-
-
-
-
-The convective heat transfer coefficient, \glssymbol{h}, as used in Equation (\ref{eq:tg2}), is calculated using 
-
-\begin{equation}\label{eq:h}
-\glssymbol{Nu} = 2.0 + 0.6\glssymbol{Re}^{1/2}\glssymbol{Pr}^{1/3};  ~~\glssymbol{h} = \glssymbol{k} / \glssymbol{D} \glssymbol{Nu}
-\end{equation}
-
-where \glssymbol{Nu} is the \glsdesc{Nu},
-\glssymbol{Re}, the \glsdesc{Re},
-\glssymbol{Pr}, the \glsdesc{Pr}, and 
-\glssymbol{k}, the \glsdesc{k} \citep{Liljegren2008}.
-
-
-
-Depending on user defined scenario model configuration settings, a number of terms in Equation (\ref{eq:tg2}) can use internally calculated values. \glssymbol{sigma} (\glssymbol{epsilona} \glssymbol{Ta}$^{4}$ + \glssymbol{epsilonsfc} \glssymbol{Tsfc}$^{4}$) can be replaced with \glssymbol{ldown} $+$ \glssymbol{lup}, the result of reflections of $L \downarrow_{i,sky}$. $(1-f_{dir})S$ can be replaced with $K \downarrow_{dif}$, and $f_{dir}S/ \cos(\theta)$ with $K \downarrow_{dir}$. Also, for vegetated grid squares, the terms for $L\downarrow$ and $L\uparrow$ can be replaced with calculations of $L\downarrow$ and $L\uparrow$ from $\epsilon \sigma T^{4}$ where $T_{s,1}$, soil surface temperature (K), is used as the temperature term for the $L\uparrow$ calculation while leaf temperature is used for $L\downarrow$. 
 
 Using \glssymbol{Tg}, calculated in Equation (\ref{eq:tg2}), the second step in calculating \glssymbol{Tmrt} proceeds in a formulation of \cite{Kantor2011} 
 \begin{equation}\label{eq:tmrtbucket}
@@ -234,30 +212,30 @@ Using \glssymbol{Tg}, calculated in Equation (\ref{eq:tg2}), the second step in 
 \end{equation}
  where \glssymbol{wsCm} is the \glsdesc{wsCm}.
 
-
-
-Finally, the Universal Thermal Climate Index (\glssymbol{UTCI}) (\SI{}{\degreeCelsius}) for each surface is calculated using the \cite{Brode2009u} \glssymbol{UTCI} formula, generating \glssymbol{UTCI} values for each surface, allowing human thermal comfort to be examined in detail across a modelled domain. The calculation uses modelled outputs of air temperature, wind speed (using model calculated wind speed at canyon level), relative humidity (from the forcing data), and $T_{mrt}$ (calculated above). VTUF-3D does not currently calculate a canopy level relative humidity. This is a current limitation and a future enhancement for the model. But as will be shown in the evaluation of VTUF-3D focusing on urban canopy layer air temperature, $T_{mrt}$, and \glssymbol{UTCI} predictions (Section \ref{sec:CoMValidations}) and in the energy flux evaluation (Section \ref{sec:PrestonValidation}), the model still performs well despite this limitation. 
+Finally, the Universal Thermal Climate Index (\glssymbol{UTCI}) (\SI{}{\degreeCelsius}) for each grid square is calculated using the \cite{Brode2009u} \glssymbol{UTCI} formula. The calculation uses modelled outputs of air temperature, wind speed (using model calculated wind speed at canyon level), relative humidity (from the forcing data), and $T_{mrt}$ (calculated above).
 
 
 
 
 \subsection{Evaluation of \glssymbol{UTCI} calculations}\label{sec:methods_eval}
 
-The evaluation of the new \glssymbol{UTCI} and \glssymbol{Tmrt} calculations was performed using observations of \glssymbol{Tmrt} and \glssymbol{UTCI} recorded in George St. and Gipps St. in the City of Melbourne \citep{Coutts2015}. The evaluation procedure is fully described in Section 3.2.1 of \cite{Nice2018} and Section 5.3 of \cite{Nice2016}. Only the modelling setup has been modified. But briefly, observations in \cite{Coutts2015} were made of two contrasting street canyons, Gipps St. (designated OPN, an open canopy) and George St. (designated TRD, a treed canyon). Seven stations in these two streets recorded air temperature, wind speed, humidity, incoming shortwave radiation, and black globe temperatures for 21 months in 2011-13. This data was used to calculate \glssymbol{Tmrt} and \glssymbol{UTCI}. 
+An evaluation of the new \glssymbol{UTCI} and \glssymbol{Tmrt} calculations was performed using observations of \glssymbol{Tmrt} and \glssymbol{UTCI} recorded in George St. and Gipps St. in the City of Melbourne \citep{Coutts2015}. The evaluation procedure repeats the procedure fully described in Section 3.2.1 of \cite{Nice2018} and Section 5.3 of \cite{Nice2016} with only the modelling setup modified. 
 
-Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and run for 29 days from 1-29 February 2012, forced by the observations from observation station OPN1. Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values were extracted from the modelled output and compared to the same locations of the observations.
+But briefly, observations in \cite{Coutts2015} were made of two contrasting street canyons, Gipps St. (designated OPN, an open canopy) and George St. (designated TRD, a treed canyon). Seven stations in these two streets recorded air temperature, wind speed, humidity, incoming shortwave radiation, and black globe temperatures for 21 months in 2011-13. This data was used to calculate values of \glssymbol{Tmrt} and \glssymbol{UTCI}. 
+
+Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and ran for 29 days from 1-29 February 2012, forced by the observations from observation station OPN1. Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values for \glssymbol{Tmrt} and \glssymbol{UTCI} were extracted from the modelled output and compared to the same locations of the observations. Comparisons with the observations were performed using the \cite{Willmott1981} d index of agreement as well as calculating mean absolute error (MAE), mean bias error (MBE), and root-mean-square error (RMSE) statistics.
 
 
 
 
 \subsection{WSUD scenarios}\label{sec:methods_wsudscenarios}
-The aim of this project is to calculate the economic benefit of the cooling from WSUD for an unnamed suburb in north-western Melbourne. To achieve this four WSUD scenarios were designed for the north-western Melbourne suburb by E2Design studio, with assistance from Christian Ulrich at Monash University. Each scenario represented a differing level of WSUD with Scenario 1 containing no WSUD, Scenario 2 has the current levels of WSUD (the control scenario), Scenario 3 is the current WSUD policy aim for the suburb and Scenario 4 is an unrealistic scenario where as much WSUD as possible is used to try and get 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb.
+An aim of this project is to calculate the economic benefit of the cooling from WSUD for an unnamed suburb in north-western Melbourne. To achieve this, four WSUD land cover scenarios were designed for the north-western Melbourne suburb (TODO, do we cite or include as coauthors E2Design and/or Christian Ulrich). Each scenario represents a differing level of WSUD infrastructure with Scenario 1 containing no WSUD, Scenario 2 models the current levels of WSUD (the control scenario), and Scenario 3 represents the current WSUD policy aim for the suburb. The last scenario, Scenario 4, is a scenario that tries to maximize the use of WSUD to hopefully obtain 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb.
 
-Each WSUD Scenario for the suburb is different due to the makeup of the urban surface, which is fed into the CRC developed TARGET model. The land surface categories in TARGET are roof fraction, road fraction, concrete fraction, water fraction, vegetation/tree fraction, dry grass fraction and irrigated grass fraction. For each WSUD Scenario the total fraction of each land surface type for the whole modelling domain is shown in Table \ref{tab:parameters}. The proportion of irrigated grass and vegetation are higher and the dry grass fraction is lower in Scenario 4 compared to Scenario 2 indicating more WSUD in the landscape. The average fractions of the land surface categories add up to more than 1 for the Scenarios (Table \ref{tab:parameters}), but for each individual grid point, the sum of the fractions is 1.
+Each WSUD scenario (land cover fractions summarized in Table \ref{tab:parameters}) for the suburb is different due to the makeup of the urban surface, which is fed into the TARGET model. Land surface categories in TARGET include fractions of roof, road, concrete, water bodies, vegetation/trees, dry grass, and irrigated grass. The proportion of irrigated grass and vegetation are higher and dry grass fraction is lower in Scenario 4 compared to Scenario 2 due to more WSUD in the landscape. The average fractions of the land surface categories add up to more than 1 for the scenarios (Table \ref{tab:parameters}), but for each individual grid point, the sum of the fractions is 1.
 
 
 \begin{table}[!htbp]
-\caption{\bf Caption  \label{tab:parameters}}     
+\caption{\bf Land cover fractions for each WSUD scenario  \label{tab:parameters}}     
 \begin{tabular}{ l l l l l}
 \textbf{Land surface category} & \textbf{Scenario 1} & \textbf{Scenario 2}  & \textbf{Scenario 3} & \textbf{Scenario 4}\\ \hline
 Roof fraction & 0.12 & 0.12 & 0.12 & 0.11 \\ 
@@ -272,11 +250,9 @@ Irrigated grass fraction & 0.03 & 0.03 & 0.04 & 0.05 \\
 \end{table}
 
 
-\subsection{Climate Scenarios}\label{sec:2}
+\subsection{Climate Scenarios}\label{sec:methods_climate_scenarios}
 
-Three different climate scenarios were developed to assess the effectiveness of WSUD during a cool summer day, an average summer day and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station, the closest weather station to the unnamed suburb, was fed into the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (km hr$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$) and total longwave radiation (W m$^{-2}$). Three days for each climate scenario (Cool, Average and Extreme) were chosen for simulation due to the high levels of clear sky, which improves the model performance. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
-
-
+Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$). Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
 
 \begin{table}[!htbp]
 \caption{\bf Caption  \label{tab:dates}}     
@@ -289,29 +265,20 @@ Extreme & 06/01/2009, 06/01/2009, 07/01/2009 \\
 \end{tabular}
 \end{table}
 
+In total, 12 scenarios were run, combining every permutation of the four WSUD scenarios and three climate scenarios.
 
 
+\subsection{Economic analysis}\label{sec:methods_econ}
+TODO
 
-In total, 12 Scenarios were run combining every permutation of the four WSUD Scenarios and three Climate Scenarios.
-
-
-
-
-
-
+An economic model was created.
 
 \section{Results}
 
 \subsection{Evaluation results}
 
-\begin{figure}[!htbp]
-a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI.png}
-~ b)
-\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-UTCI.png}
 
-\caption{\bf Comparison of TARGET modelled \glssymbol{UTCI} to observed locations in a) George St. and b) Gipps St.}    
- \label{fig:utcieval} 
-\end{figure} 
+Modelled predictions for the George St. observation locations (TRD 2, TRD 3, TRD 4, and TRD 5) and Gipps St. observation locations (OPN 3, OPN 4, and OPN 5) were extracted from the results of the GeorgeEvaluation and GippsEvaluation scenarios and compared to the observations for those locations. These are presented in Figures \ref{fig:tmrteval} and \ref{fig:utcieval}. Statistical analysis (RMSE, MBE, MAE, and d index of agreement) for these four and three locations for \glssymbol{Tmrt} and \glssymbol{UTCI} are summarised in Table \ref{tab:georgetmrt}.
 
 \begin{figure}[!htbp]
 a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-Tmrt.png}
@@ -322,7 +289,43 @@ a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-Tmrt.png
  \label{fig:tmrteval} 
 \end{figure} 
 
+\begin{figure}[!htbp]
+a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI.png}
+~ b)
+\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-UTCI.png}
 
+\caption{\bf Comparison of TARGET modelled \glssymbol{UTCI} to observed locations in a) George St. and b) Gipps St.}    
+ \label{fig:utcieval} 
+\end{figure} 
+
+
+\begin{center}
+\begin{table}
+\caption{George St. GeorgeValidation and Gipps St. GippsValidation scenarios $T_{mrt}$ and UTCI predicted vs. observations statistical performance of RMSE (\SI{}{\degreeCelsius}), MBE (\SI{}{\degreeCelsius}), MAE (\SI{}{\degreeCelsius}), and d index of agreement.\label{tab:georgetmrt}}
+  \begin{tabular}{ |c|c | c |c |c  | c | c |  c|c|}   
+  \hline    &  \multicolumn{4}{c|}{\textbf{$T_{mrt}$}} & \multicolumn{4}{c|}{\textbf{UTCI}}  \\  
+  \textbf{Observation point} 
+	& \textbf{RMSE} 
+	& \textbf{MBE} 
+	& \textbf{MAE} 
+	& \textbf{d} 
+	& \textbf{RMSE} 
+	& \textbf{MBE} 
+	& \textbf{MAE}
+	& \textbf{d}	
+	\\ \hline
+TRD\_2 & 4.18 & -1.07 & 2.71 & 0.963 & 2.18 & -1.32 & 1.69 & 0.960  \\ \hline
+TRD\_3 & 5.92 & -0.55 & 3.62 & 0.922 & 2.66 & -1.47 & 2.01 & 0.940  \\ \hline
+TRD\_4 & 7.18 & -3.70 & 4.89 & 0.922 & 3.05 & -2.04 & 2.33 & 0.935  \\ \hline
+TRD\_5 & 4.93 & -1.37 & 3.00 & 0.955 & 2.97 & -1.93 & 2.25 & 0.931  \\ \hline
+OPN\_3 & 7.05 & -3.53 & 4.83 & 0.927 & 2.59 & -1.61 & 1.88 & 0.955   \\ \hline
+OPN\_4 & 7.18 & -4.32 & 4.88 & 0.924 & 2.63 & -1.81 & 2.03 & 0.951  \\ \hline
+OPN\_5 & 7.31 & -3.75 & 4.96 & 0.922 & 2.59 & -1.59 & 1.90 & 0.954  \\ \hline
+  \end{tabular} 
+\end{table}
+\end{center} 
+
+Statistics for Gipps St., a street with an open canopy, show very similar results for each location, with d index of agreement values ranging from 0.922 to 0.927 for \glssymbol{Tmrt} and 0.951 to 0.955 for \glssymbol{UTCI}. George St. shows a slightly wider range of results with d index of agreement values ranging from 0.922 to 0.963 for \glssymbol{Tmrt} and 0.931 to 0.960 for \glssymbol{UTCI}. Slightly more accurate results for \glssymbol{Tmrt} for locations with morning shade and afternoon sun (TRD\_2 and TRD\_5) compared to the other locations with full sun. The most accurate predictions of \glssymbol{UTCI} were for TRD\_2, a location with more shading than the other TRD locations.
 
 \subsection{Results for whole domain}\label{sec:3}
 
