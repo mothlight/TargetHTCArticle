@@ -2,6 +2,7 @@ Introduction
 -Urban heat, a bad thing
 -CSUD/WSUD proposed for urban cooling
 -TARGET tool
+-HTC to quantify cooling effects on people
 --What is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
 --What are the economic impacts of this cooling?
 
