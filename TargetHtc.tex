@@ -159,7 +159,7 @@ The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGE
 
 --What is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
 
---What are the economic impacts of this cooling?
+%--What are the economic impacts of this cooling?
 
 
 
@@ -221,9 +221,10 @@ Finally, the Universal Thermal Climate Index (\glssymbol{UTCI}) (\SI{}{\degreeCe
 
 An evaluation of the new \glssymbol{UTCI} and \glssymbol{Tmrt} calculations was performed using observations of \glssymbol{Tmrt} and \glssymbol{UTCI} recorded in George St. and Gipps St. in the City of Melbourne \citep{Coutts2015}. The evaluation procedure repeats the procedure fully described in Section 3.2.1 of \cite{Nice2018} and Section 5.3 of \cite{Nice2016} with only the modelling setup modified. 
 
-But briefly, observations in \cite{Coutts2015} were made of two contrasting street canyons, Gipps St. (designated OPN, an open canopy) and George St. (designated TRD, a treed canyon). Seven stations in these two streets recorded air temperature, wind speed, humidity, incoming shortwave radiation, and black globe temperatures for 21 months in 2011-13. This data was used to calculate values of \glssymbol{Tmrt} and \glssymbol{UTCI}. 
+But briefly, observations in \cite{Coutts2015} were made of two contrasting street canyons, Gipps St. (designated OPN), a street with an open canopy (12\% plan area canopy cover), and George St. (designated TRD), a treed canyon (45\% plan area canopy cover). Seven stations in these two streets recorded air temperature, wind speed, humidity, incoming shortwave radiation, and black globe temperatures for 21 months in 2011-13. These readings were used to calculate values of \glssymbol{Tmrt} and \glssymbol{UTCI}. 
 
-Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and ran for 29 days from 1-29 February 2012, forced by the observations from observation station OPN1. Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values for \glssymbol{Tmrt} and \glssymbol{UTCI} were extracted from the modelled output and compared to the same locations of the observations. Comparisons with the observations were performed using the \cite{Willmott1981} d index of agreement as well as calculating mean absolute error (MAE), mean bias error (MBE), and root-mean-square error (RMSE) statistics.
+
+Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and ran for 29 days from 1-29 February 2012, forced by the observations from the observation station OPN1. Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values for \glssymbol{Tmrt} and \glssymbol{UTCI} were extracted from the modelled output and compared to the same locations of the observations. Comparisons with the observations were performed using the \cite{Willmott1981} d index of agreement as well as calculating mean absolute error (MAE), mean bias error (MBE), and root-mean-square error (RMSE) statistics.
 
 
 
@@ -255,7 +256,7 @@ Irrigated grass fraction & 0.03 & 0.03 & 0.04 & 0.05 \\
 Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$). Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
 
 \begin{table}[!htbp]
-\caption{\bf Caption  \label{tab:dates}}     
+\caption{\bf Historical meteorological data used to construct different summer climate scenarios.  \label{tab:dates}}     
 \begin{tabular}{ l l}
 \textbf{Scenario} & \textbf{Dates}\\ \hline
 Cool & 01/02/2005, 10/02/2009, 08/02/2012 \\ 
@@ -268,14 +269,14 @@ Extreme & 06/01/2009, 06/01/2009, 07/01/2009 \\
 In total, 12 scenarios were run, combining every permutation of the four WSUD scenarios and three climate scenarios.
 
 
-\subsection{Economic analysis}\label{sec:methods_econ}
-TODO
-
-An economic model was created.
+%\subsection{Economic analysis}\label{sec:methods_econ}
+%TODO
+%
+%An economic model was created.
 
 \section{Results}
 
-\subsection{Evaluation results}
+\subsection{Evaluation of added TARGET \glssymbol{Tmrt} and \glssymbol{UTCI} functionality}
 
 
 Modelled predictions for the George St. observation locations (TRD 2, TRD 3, TRD 4, and TRD 5) and Gipps St. observation locations (OPN 3, OPN 4, and OPN 5) were extracted from the results of the GeorgeEvaluation and GippsEvaluation scenarios and compared to the observations for those locations. These are presented in Figures \ref{fig:tmrteval} and \ref{fig:utcieval}. Statistical analysis (RMSE, MBE, MAE, and d index of agreement) for these four and three locations for \glssymbol{Tmrt} and \glssymbol{UTCI} are summarised in Table \ref{tab:georgetmrt}.
@@ -301,7 +302,7 @@ a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI.png
 
 \begin{center}
 \begin{table}
-\caption{George St. GeorgeValidation and Gipps St. GippsValidation scenarios $T_{mrt}$ and UTCI predicted vs. observations statistical performance of RMSE (\SI{}{\degreeCelsius}), MBE (\SI{}{\degreeCelsius}), MAE (\SI{}{\degreeCelsius}), and d index of agreement.\label{tab:georgetmrt}}
+\caption{George St. GeorgeEvaluation and Gipps St. GippsEvaluation scenarios $T_{mrt}$ and UTCI predicted vs. observations statistical performance of RMSE (\SI{}{\degreeCelsius}), MBE (\SI{}{\degreeCelsius}), MAE (\SI{}{\degreeCelsius}), and d index of agreement.\label{tab:georgetmrt}}
   \begin{tabular}{ |c|c | c |c |c  | c | c |  c|c|}   
   \hline    &  \multicolumn{4}{c|}{\textbf{$T_{mrt}$}} & \multicolumn{4}{c|}{\textbf{UTCI}}  \\  
   \textbf{Observation point} 
@@ -325,16 +326,18 @@ OPN\_5 & 7.31 & -3.75 & 4.96 & 0.922 & 2.59 & -1.59 & 1.90 & 0.954  \\ \hline
 \end{table}
 \end{center} 
 
-Statistics for Gipps St., a street with an open canopy, show very similar results for each location, with d index of agreement values ranging from 0.922 to 0.927 for \glssymbol{Tmrt} and 0.951 to 0.955 for \glssymbol{UTCI}. George St. shows a slightly wider range of results with d index of agreement values ranging from 0.922 to 0.963 for \glssymbol{Tmrt} and 0.931 to 0.960 for \glssymbol{UTCI}. Slightly more accurate results for \glssymbol{Tmrt} for locations with morning shade and afternoon sun (TRD\_2 and TRD\_5) compared to the other locations with full sun. The most accurate predictions of \glssymbol{UTCI} were for TRD\_2, a location with more shading than the other TRD locations.
+Statistics for Gipps St., a street with an open canopy, show very similar results for each location, with d index of agreement values ranging from 0.922 to 0.927 for \glssymbol{Tmrt} and 0.951 to 0.955 for \glssymbol{UTCI}. George St. shows a slightly wider range of results with d index of agreement values ranging from 0.922 to 0.963 for \glssymbol{Tmrt} and 0.931 to 0.960 for \glssymbol{UTCI}. Slightly more accurate results for \glssymbol{Tmrt} for locations with morning shade and afternoon sun (TRD\_2 and TRD\_5) compared to the other locations with full sun. The most accurate predictions of \glssymbol{UTCI} were for TRD\_2, a location with more shading than the other TRD locations. 
 
-\subsection{Results for whole domain}\label{sec:3}
+Overall, the results show that the new HTC module in TARGET performs well is suitable to make HTC predictions for a variety of urban scenarios.
 
+\subsection{Results of whole domain WSUD scenarios}\label{sec:whole_domain}
+After the new functionality in the TARGET model has been evaluated to ensure accurate predictions, we turn to the results of the WSUD scenarios. 
 
-The area-averaged difference in temperature between WSUD Scenarios 1,3,4 and the control case Scenario 2, are shown for each Climate Scenario in Table \ref{tab:scenarioDiff}. Scenario 3 produced the most cooling in each climate scenario compared to the base case of Scenario 2, followed by Scenario 4. This was unexpected and suggests that for the whole domain the highest WSUD Scenario does not produce as much cooling throughout the three simulated days. However, the cooling produced in these simulations is extremely small, and may not be physical. There was no difference in temperature between Scenarios 1 and 2. 
+The results of each of the scenarios were averaged across the entire 80,000 grid point domain for the 3 day modelling period. The difference in air temperature between WSUD Scenarios 1,3,4 and the control case Scenario 2, are shown for each climate scenario in Table \ref{tab:scenarioDiff}. Scenario 3 produced the most cooling in each climate scenario compared to the base case of Scenario 2, followed by Scenario 4. This was unexpected and suggests that for the whole domain the highest WSUD Scenario does not produce as much cooling throughout the three simulated days. However, the cooling produced in these simulations is extremely small, and may not be physical. There was no difference in temperature between Scenarios 1 and 2. 
 
 
 \begin{table}[!htbp]
-\caption{\bf The difference in temperature between the WSUD Scenarios for each Climate Scenario for the whole suburb.  \label{tab:scenarioDiff}}     
+\caption{\bf The difference in air temperature (average of the 80,000 grid points across the 3 day modellilng period) between WSUD scenarios for each climate scenario.  \label{tab:scenarioDiff}}     
 \begin{tabular}{ l l l l}
 \textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
@@ -346,46 +349,38 @@ Scenario 4 minus Scenario 2 & -0.02  & -0.01 & -0.02\\
 \end{tabular}
 \end{table}
 
+TODO, also calculate difference at single point in time at 3pm
 
+Overall, the WSUD implemented in Scenario 3 can reduce the 2m air temperature by 0.04\SI{}{\degreeCelsius} during cool summer days, 0.03\SI{}{\degreeCelsius} during average summer days and 0.03\SI{}{\degreeCelsius} during extreme summer days. The noteworthy result is that WSUD is most effective during a cool summer day. To investigate this result, simulations where the whole domain consists of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
 
-Overall, the WSUD implemented in Scenario 3 can reduce the 2m temperature by 0.04\SI{}{\degreeCelsius} during cool summer days, 0.03\SI{}{\degreeCelsius} during average summer days and 0.03\SI{}{\degreeCelsius} during extreme summer days. The noteworthy result is that WSUD is the most effective during a cool summer day. To investigate this result, simulations where the whole domain consisted of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
-
-By comparing Figures \ref{fig:fig1}a and b it can be seen that during the cool days there is a clear difference in temperature between the warmest land surface categories: road, concrete and dry grass. In contrast, during extreme days the differences are much smaller between the categories. We hypothesise that during extreme days every surface type is extremely hot regardless of whether it is irrigated grass or concrete, accounting for the smaller difference in temperature from the high WSUD scenario during extreme days.
+In these scenarios (Figures \ref{fig:surface_air_temps}a and b), it can be seen that during the cool days there is a clear difference in air temperature between the warmest land surface categories: road, concrete, and dry grass. In contrast, during extreme days the differences are much smaller between the categories. We hypothesise that during extreme days every surface type is extremely hot regardless of whether it is irrigated grass or concrete, accounting for the smaller difference in temperature from the high WSUD scenario during extreme days.
 
 
 \begin{figure}[!htbp]
 \centering   
-\includegraphics[scale=0.40]{images/fig1a}
+a)\includegraphics[scale=0.40]{images/fig1a}
 ~
-\includegraphics[scale=0.40]{images/fig1b} 
-\caption{\bf The temperature of each land surface category during a the three (a) cool and (b) extreme summer days. Missing points are from missing input data.}    
- \label{fig:fig1} 
+b)\includegraphics[scale=0.40]{images/fig1b} 
+\caption{\bf The air temperature of each land surface category during a the three (a) cool and (b) extreme summer days. Missing points are from missing input data.}    
+ \label{fig:surface_air_temps} 
 \end{figure} 
 
 
-
-
-\subsection{A small representative urban portion}\label{sec:4}
-
-
-
-
-
-Averaging results over the whole domain is not necessarily representative of what a person in the unnamed suburb is likely to experience, particularly since a large portion of the modelling domain is grasslands. Therefore, we conducted analysis on a small representative urban portion of the domain (highlighted in Figure \ref{fig:fig2}), the results of which are discussed in this section. All results discussed in Sections \ref{sec:5} and \ref{sec:6} also refer to the representative urban portion.
-
+\subsection{A small representative urban portion}\label{sec:result_rep_urban}
+Averaging results over the whole domain is not necessarily representative of what would be experienced by a resident of the suburb, particularly since a large portion of the modelling domain is surrounding grasslands. Therefore, we conducted an analysis on a small representative urban portion (designated area of interest (AOI)), of the domain (highlighted in Figure \ref{fig:temp_diff_repre}), the results of which are discussed in this section. Also, all results discussed in Sections \ref{sec:results_htc} and \ref{sec:results_econ} are from the AOI.
 
 \begin{figure}[!htbp]
 \centering   
 \includegraphics[scale=0.40]{images/fig2}
-\caption{\bf The temperature difference between Scenario 4 and Scenario 2 for the whole domain with the orange box indicating the small representative urban portion.}    
- \label{fig:fig2} 
+\caption{\bf The air temperature difference between Scenario 4 and Scenario 2 for the whole domain with the orange box indicating the small representative urban portion area of interest (AOI).}    
+ \label{fig:temp_diff_repre} 
 \end{figure}
 
-The representative urban portion area average difference in temperature between Scenarios 1,3,4 and Scenario 2, the control case, are shown in Table 4. These results are much more significant and align with expectations that Scenario 4 would produce the most cooling, followed by Scenario 3. The policy goal of Scenario 3 produces cooling of ~0.1\SI{}{\degreeCelsius} for each Climate Scenario. However, the efficacy of Scenario 4 is highly dependent on the Climate Scenario, producing an average cooling of 0.5\SI{}{\degreeCelsius} during the Cool Scenario, 0.4\SI{}{\degreeCelsius} during the Average Scenario and 0.3\SI{}{\degreeCelsius} during the Extreme Scenario. This follows the same logic from the previous section that the differences between each land surface category is larger during Cool summer days where WSUD can have a larger effect, but during Average and Extreme summer days all land surfaces (including vegetation and water) are warmer so it is harder for WSUD to create a cooling effect.
+The air temperature difference (averaged across the AOI during the three day scenario) between Scenarios 1, 3, and 4 and Scenario 2, the control case, are shown in Table \ref{tab:scenarioDiffRep}. These results are much more significant and align with expectations that Scenario 4 would produce the most cooling, followed by Scenario 3. The policy goal of Scenario 3 produces cooling of ~0.1\SI{}{\degreeCelsius} for each climate scenario. However, the efficacy of Scenario 4 is highly dependent on the climate scenario, producing an average cooling of 0.5\SI{}{\degreeCelsius} during the Cool Scenario, 0.4\SI{}{\degreeCelsius} during the Average Scenario and 0.3\SI{}{\degreeCelsius} during the Extreme Scenario. This follows the same logic from the previous section that the differences between each land surface category is larger during Cool summer days where WSUD can have a larger effect, but during Average and Extreme summer days all land surfaces (including vegetation and water) are warmer so it is harder for WSUD to create a cooling effect.
 
 
 \begin{table}[!htbp]
-\caption{\bf The difference in temperature between the WSUD Scenarios for each Climate Scenario for the representative urban portion. \label{tab:scenarioDiffRep}}     
+\caption{\bf The difference in air temperature between the WSUD Scenarios for each Climate Scenario, averaged across the AOI during the three day scenario. \label{tab:scenarioDiffRep}}     
 \begin{tabular}{ l l l l}
 \textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
@@ -399,33 +394,33 @@ Scenario 4 minus Scenario 2 & -0.51  & -0.40 & -0.31\\
 
 
 
-The timeseries plots of the area average temperature for each WSUD scenario further shows that Scenario 4 is more effective during cool summer days than Extreme summer days (Figure \ref{fig:fig3}). The difference in temperature between the four WSUD Scenarios increases when averaging over the representative urban portion, compared to the whole domain in the previous section. This is because the WSUD is more concentrated across the representative urban portion and so the effects are more significant. In the previous section the majority of the domain is dry grasslands which dilutes the cooling. The average difference in temperature between the WSUD scenarios is largest during the day (Figure \ref{fig:fig3}) indicating that the daily average reduction in temperature in Table \ref{tab:scenarioDiffRep} does not represent the diurnal effects of the cooling.
+The timeseries plots of the area average air temperature for each WSUD scenario (Figure \ref{fig:timeseries_scenarios}) further show that Scenario 4 is more effective during cool summer days than Extreme summer days. The difference in temperature between the four WSUD Scenarios increases when averaging over the AOI, compared to the whole domain in Section \ref{sec:whole_domain}. This is because the WSUD interventions are more concentrated across the AOI and so the effects are more significant. In the previous section the majority of the domain is dry grasslands which dilutes the cooling. The average difference in temperature between the WSUD scenarios is largest during the day (Figure \ref{fig:timeseries_scenarios}) indicating that the daily average reduction in temperature in Table \ref{tab:scenarioDiffRep} does not represent the diurnal effects of the cooling.
 
-Another interesting finding is that WSUD is almost ineffectual at night (Figure \ref{fig:fig3}). This suggests that for reducing nighttime heat stress and improving human thermal comfort, these WSUD scenarios may not have the desired effect. We discuss the human thermal comfort outcomes in the next section.
+Another interesting finding is that WSUD is almost ineffectual at night (Figure \ref{fig:timeseries_scenarios}). This suggests that for reducing nighttime heat stress and improving human thermal comfort, these WSUD scenarios may not have the desired effect. Human thermal comfort outcomes will be discussed further in the next section.
 
 \begin{figure}[!htbp]
 \centering   
-\includegraphics[scale=0.40]{images/fig3a}
+a)\includegraphics[scale=0.40]{images/fig3a}
 ~
-\includegraphics[scale=0.40]{images/fig3b} 
-\caption{\bf The timeseries for the four WSUD Scenarios during the (a) Cool Scenario and (b) Extreme Scenario. Gaps are from missing data.}    
- \label{fig:fig3} 
+b)\includegraphics[scale=0.40]{images/fig3b} 
+\caption{\bf The timeseries of air temperatures for the four WSUD Scenarios during the (a) Cool Scenario and (b) Extreme Scenario. Gaps are from missing data.}    
+ \label{fig:timeseries_scenarios} 
 \end{figure} 
 
 
 
 
-\subsection{Human thermal comfort}\label{sec:5}
+\subsection{Human thermal comfort impacts of WSUD}\label{sec:results_htc}
 
-The TARGET model is able to output the Universal Thermal Climate Index (\glssymbol{UTCI}), a measure of how a person feels that accounts for temperature, wind speed, relative humidity and radiation through the mean radiant temperature. Using the \glssymbol{UTCI} gives further detail into how WSUD changes the environment for humans. For example, the temperature may be reduced due to irrigated grass but people may not feel the difference due to the added humidity, which can make an environment feel warmer to a person.
+With the additions to the TARGET model described in Section \ref{sec:tmrtutci}, TARGET is now able to output the Universal Thermal Climate Index (\glssymbol{UTCI}), a measure of how a person feels that accounts for temperature, wind speed, relative humidity and radiation through the mean radiant temperature. Using the \glssymbol{UTCI} gives further detail into how WSUD changes the environment for humans. For example, the temperature may be reduced due to irrigated grass but people may not feel the difference due to the added humidity, which can make an environment feel warmer to a person.
 
-The average difference in \glssymbol{UTCI} between WSUD Scenarios 1,3,4 and Scenario 2 for the three Climate Scenarios are shown in Table 5. The reduction in \glssymbol{UTCI} (Table 5) is greater than the reduction in temperature in Table 4. These results indicate that incorporating WSUD into the landscape like Scenario 4 is highly beneficial for increasing the cooling effect ‘felt’ by humans. In terms of temperature, Scenario 4 cools by 0.51\SI{}{\degreeCelsius} during a Cool summer day, but the \glssymbol{UTCI} shows that it ‘feels’ like cooling of 0.81\SI{}{\degreeCelsius} meaning that WSUD is effective at cooling the environment and improving human thermal comfort. Scenario 3 also produces significant cooling in the \glssymbol{UTCI} with reductions of 0.22\SI{}{\degreeCelsius} during Cool summer days. As with the temperature, the efficacy of the cooling of the \glssymbol{UTCI} is dependent on the Climate Scenario where the Cool Scenario has the most cooling and the Extreme Scenario has the least cooling. 
+The average difference in \glssymbol{UTCI} between WSUD Scenarios 1, 3, and 4 and Scenario 2 for the three climate scenarios are shown in Table \ref{tab:scenarioDiffRep2}. The reduction in \glssymbol{UTCI} (Table \ref{tab:scenarioDiffRep2}) is greater than the reduction in temperature in Table \ref{tab:scenarioDiffRep}. These results indicate that incorporating WSUD into the landscape (Scenario 4) is highly beneficial for increasing the cooling effect `felt' by humans. In terms of temperature, Scenario 4 cools by 0.51\SI{}{\degreeCelsius} during a Cool summer day, but the \glssymbol{UTCI} shows that it ‘feels’ like cooling of 0.81\SI{}{\degreeCelsius}, meaning that WSUD is effective at cooling the environment and improving human thermal comfort. Scenario 3 (which incorporates less WSUD interventions than Scenario 4) also produces significant cooling in the \glssymbol{UTCI} with reductions of 0.22\SI{}{\degreeCelsius} during Cool summer days. As with the temperature, the efficacy of the cooling of the \glssymbol{UTCI} is dependent on the climate scenario where the Cool Scenario has the most cooling and the Extreme Scenario has the least cooling. 
 
-The difference in \glssymbol{UTCI} between Scenarios 1 and 2 show that Scenario 1, the no WSUD Scenario is cooler than the control case of Scenario 2. This is a counterintuitive result as Scenario 1 would be expected to be warmer than Scenario 2. However, the differences between the land surfaces are very small (Table 1) where Scenario 2 is almost identical except more water. As such, the difference in \glssymbol{UTCI} between the two scenarios is not considered physical. 
+The difference in \glssymbol{UTCI} between Scenarios 1 and 2 show that Scenario 1 (the no WSUD Scenario) is cooler than the control case of Scenario 2. This is a counter intuitive result as Scenario 1 would be expected to be warmer than Scenario 2. However, the differences between the land surfaces are very small (Table 1) where Scenario 2 is almost identical except more water. As such, the difference in \glssymbol{UTCI} between the two scenarios is not considered physical. 
 
 
 \begin{table}[!htbp]
-\caption{\bf The difference in temperature between the WSUD Scenarios for each Climate Scenario for the small representative urban square. \label{tab:scenarioDiffRep2}}     
+\caption{\bf The difference in \glssymbol{UTCI} temperature between the WSUD Scenarios for each climate scenario for the AOI. \label{tab:scenarioDiffRep2}}     
 \begin{tabular}{ l l l l}
 \textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
@@ -437,53 +432,45 @@ Scenario 4 minus Scenario 2 & -0.81  & -0.68 & -0.38\\
 \end{tabular}
 \end{table}
 
-
-
-
-The aim of Scenario 4 was to produce 2\SI{}{\degreeCelsius} of cooling and this is achieved when considering the spatial difference in \glssymbol{UTCI} compared to Scenario 2 at midday (Figure \ref{fig:fig4}). The 2\SI{}{\degreeCelsius} of cooling is almost everywhere during the Cool Scenarios and less pervasive in the Average and Extreme Scenarios, but these results are still significant. A reduction in \glssymbol{UTCI} of 2\SI{}{\degreeCelsius} has the potential to save many lives during summer.
+Scenario 4 was designed to produce 2\SI{}{\degreeCelsius} of cooling and this is achieved when considering the spatial difference in \glssymbol{UTCI} compared to Scenario 2 at midday (Figure \ref{fig:fig4}). The 2\SI{}{\degreeCelsius} of cooling is almost everywhere during the Cool Scenarios and less pervasive in the Average and Extreme Scenarios, but these results are still significant. A reduction in \glssymbol{UTCI} of 2\SI{}{\degreeCelsius} has the potential to save many lives during summer (CITE).
 
 
 \begin{figure}[!htbp]
 \centering  
-\textbf{Cool Scenario 4 minus Scenario 2} ~
-\textbf{Average Scenario 4 minus Scenario 2} ~
-\textbf{Extreme Scenario 4 minus Scenario 2} 
-\includegraphics[scale=0.30]{images/fig4a}
+~~\textbf{{\small Cool Scenario 4 minus Scenario 2}} ~~~~
+\textbf{{\small Average Scenario 4 minus Scenario 2}} ~~~~
+\textbf{{\small Extreme Scenario 4 minus Scenario 2}} 
+a)\includegraphics[scale=0.30,trim = 0mm 0mm 0mm 8mm,clip]{images/fig4a}
 ~
-\includegraphics[scale=0.30]{images/fig4b} 
+b)\includegraphics[scale=0.30,trim = 0mm 0mm 0mm 8mm,clip]{images/fig4b} 
 ~
-\includegraphics[scale=0.30]{images/fig4c} 
-\caption{\bf The difference in \glssymbol{UTCI} between Scenario 4 and Scenario 2 at midday for the representative urban portion for the Cool, Average and Extreme climate Scenarios.}    
+c)\includegraphics[scale=0.30,trim = 0mm 0mm 0mm 8mm,clip]{images/fig4c} 
+\caption{\bf The difference in \glssymbol{UTCI} between Scenario 4 and Scenario 2 at midday for the AOI for the a) Cool, b) Average and c) Extreme climate Scenarios.}    
  \label{fig:fig4} 
 \end{figure} 
 
 
-\subsection{Data for economic analysis}\label{sec:6}
+%\subsection{Data for economic analysis}\label{sec:results_econ}
+%To conduct the economic evaluation of the cooling from WSUD the maximum and minimum temperatures from a cool, average and extreme summer were reconstructed based on the modelling results from the four WSUD Scenarios and three Climate Scenarios. First, average summer temperatures (Dec - Feb) for Victoria were ranked from 1910-2017 and a typical cool summer (1986-87), an average summer (1971-1972) and an extreme summer (2008-2009) were identified. Maximum and minimum temperature data from Melbourne Airport weather station was then obtained for all 90 days (or 91 days for 1971-1972) of the three summers. The aim was to recreate the temperature during these summers if WSUD was present at the time, ie map the temperatures for the cases of Scenarios 1, 3 and 4, where Scenario 2 is observations. This was achieved by selecting the maximum and minimum temperature for each WSUD Scenario from the middle day of the Cool, Average and Extreme three day Scenarios described in Section \ref{sec:methods_wsudscenarios}. Using this data a linear interpolation was performed which creates an algorithm whereby data fed into the algorithm acts based on how much cooling each WSUD Scenario produced in each Climate Scenario. For example, data fed into the algorithm will have a larger reduction in temperature for cool days than extremely hot days, because the WSUD Scenarios are more effective during cool summer days than hot summer days. Hence, December 1 2008 had a maximum temperature of 21.1\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 19.7\SI{}{\degreeCelsius}, a difference of 1.4\SI{}{\degreeCelsius}. Furthermore, February 27 2009 had a temperature of 35.5\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 34.8\SI{}{\degreeCelsius}, a difference of 0.7\SI{}{\degreeCelsius}, showing that Scenario 4 is less effective on hotter days, as the modelling results showed.
+%
+%The maximum and minimum temperature from the typical cool (1986-87), average (1971-1972) and extreme summers (2008-2009) were put through the algorithm and the output was used to conduct the economic analysis. Figure \ref{fig:fig5}a is an example of this output for the 2008-2009 summer comparing the maximum temperatures of Scenario 2 (observations) and if there had of been a Scenario 4 level of WSUD present. The largest differences occur during the cooler days and the smallest differences occur on the hottest days. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event. Figure \ref{fig:fig5}b shows the same output for the minimum temperature where the differences between the scenarios is small.
+%
+%
+%
+%\begin{figure}[!htbp]
+%\centering   
+%\includegraphics[scale=0.40]{images/fig5a}
+%~
+%\includegraphics[scale=0.40]{images/fig5b} 
+%\caption{\bf The observational (Scenario 2) and the WSUD Scenario 4 temperature mapped using linear interpolation for the (a) maximum and (b) minimum temperature. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event.}    
+% \label{fig:fig5} 
+%\end{figure} 
 
 
 
+\section{Discussion}\label{sec:discussion}
 
-
-To conduct the economic evaluation of the cooling from WSUD the maximum and minimum temperatures from a cool, average and extreme summer were reconstructed based on the modelling results from the four WSUD Scenarios and three Climate Scenarios. First, average summer temperatures (Dec - Feb) for Victoria were ranked from 1910-2017 and a typical cool summer (1986-87), an average summer (1971-1972) and an extreme summer (2008-2009) were identified. Maximum and minimum temperature data from Melbourne Airport weather station was then obtained for all 90 days (or 91 days for 1971-1972) of the three summers. The aim was to recreate the temperature during these summers if WSUD was present at the time, ie map the temperatures for the cases of Scenarios 1, 3 and 4, where Scenario 2 is observations. This was achieved by selecting the maximum and minimum temperature for each WSUD Scenario from the middle day of the Cool, Average and Extreme three day Scenarios described in Section \ref{sec:methods_wsudscenarios}. Using this data a linear interpolation was performed which creates an algorithm whereby data fed into the algorithm acts based on how much cooling each WSUD Scenario produced in each Climate Scenario. For example, data fed into the algorithm will have a larger reduction in temperature for cool days than extremely hot days, because the WSUD Scenarios are more effective during cool summer days than hot summer days. Hence, December 1 2008 had a maximum temperature of 21.1\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 19.7\SI{}{\degreeCelsius}, a difference of 1.4\SI{}{\degreeCelsius}. Furthermore, February 27 2009 had a temperature of 35.5\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 34.8\SI{}{\degreeCelsius}, a difference of 0.7\SI{}{\degreeCelsius}, showing that Scenario 4 is less effective on hotter days, as the modelling results showed.
-
-The maximum and minimum temperature from the typical cool (1986-87), average (1971-1972) and extreme summers (2008-2009) were put through the algorithm and the output was used to conduct the economic analysis. Figure \ref{fig:fig5}a is an example of this output for the 2008-2009 summer comparing the maximum temperatures of Scenario 2 (observations) and if there had of been a Scenario 4 level of WSUD present. The largest differences occur during the cooler days and the smallest differences occur on the hottest days. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event. Figure \ref{fig:fig5}b shows the same output for the minimum temperature where the differences between the scenarios is small.
-
-
-
-\begin{figure}[!htbp]
-\centering   
-\includegraphics[scale=0.40]{images/fig5a}
-~
-\includegraphics[scale=0.40]{images/fig5b} 
-\caption{\bf The observational (Scenario 2) and the WSUD Scenario 4 temperature mapped using linear interpolation for the (a) maximum and (b) minimum temperature. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event.}    
- \label{fig:fig5} 
-\end{figure} 
-
-
-
-
-
-
+\section{Conclusion}\label{sec:conclusion}
 
 
 
@@ -519,16 +506,16 @@ The support of the Commonwealth of Australia through the Cooperative Research Ce
 
 %% The Appendices part is started with the command \appendix;
 %% appendix sections are then done as normal sections
-\appendix
-\setcounter{table}{0}
-\renewcommand{\thetable}{A\arabic{table}}
+%\appendix
+%\setcounter{table}{0}
+%\renewcommand{\thetable}{A\arabic{table}}
 
 %\subsection{}                               %% Appendix A1, A2, etc.
 
 
 %%%%%%%%%% taking out parameterizations
-\section{Appendix}\label{sec:app}  
-\subsection{Additional data tables}\label{app:tables}  
+%\section{Appendix}\label{sec:app}  
+%\subsection{Additional data tables}\label{app:tables}  
 
 
 
