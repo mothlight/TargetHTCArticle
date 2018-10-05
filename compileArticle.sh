@@ -8,7 +8,10 @@ cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/Georg
 cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tmrt.png images/Eval
 cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tair.png images/Eval
 
-
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_AOI.png images/temperatures
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll.png images/temperatures
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_UTCI.png images/temperatures
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_UTCI_AOI.png images/temperatures
 
 rm TargetHtc.glsdefs
 bibtex TargetHtc.aux

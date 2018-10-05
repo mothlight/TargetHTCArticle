@@ -153,14 +153,14 @@ micro-climate modelling, urban vegetation, human thermal comfort, TARGET model, 
 
 -CSUD/WSUD proposed for urban cooling
 
-The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGET)
--TARGET tool \citep{Broadbent2018}
 
---Can HTC be accurately predicted by TARGET?
 
---What is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
+The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGET) model \citep{Broadbent2018} is a model designed to be efficient and accessible while providing accurate calculations of urban surface temperatures and street level air temperature at micro-to-local scales. The model has been designed specifically to assess the cooling effects of green/blue (urban vegetation and water) infrastructure. Its efficiency means that modelling domains of tens of thousands of grid points can calculate weeks worth of simulation in seconds to minutes. The accessibility allows modelling scenarios to be created from simple land cover class fractions and a few basic parameters.
 
-%--What are the economic impacts of this cooling?
+However, in the present version, TARGET could only calculate surface and air temperatures. As part of this study, the ability to calculate human thermal comfort indexes, specifically \glssymbol{UTCI} as well as the mean radiant temperature \glssymbol{Tmrt} needed to calculate \glssymbol{UTCI} were added to TARGET.
+
+The main aims of this paper are the following: 1) can the TARGET model accurately predict (spatially and temporally) HTC in a variety of urban street canyons? and 2) what is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
+
 
 
 
@@ -336,23 +336,46 @@ After the new functionality in the TARGET model has been evaluated to ensure acc
 
 The results of each of the scenarios were averaged across the entire 80,000 grid point domain for the 3 day modelling period. The difference in air temperature between WSUD Scenarios 1,3,4 and the control case Scenario 2, are shown for each climate scenario in Table \ref{tab:scenarioDiff}. Scenario 3 produced the most cooling in each climate scenario compared to the base case of Scenario 2, followed by Scenario 4. This was unexpected and suggests that for the whole domain the highest WSUD Scenario does not produce as much cooling throughout the three simulated days. However, the cooling produced in these simulations is extremely small, and may not be physical. There was no difference in temperature between Scenarios 1 and 2. 
 
+Figure \ref{fig:diff_air_temp} shows differences in air temperature between the 4 WSUD scenarios for each of the 3 climate scenarios. As these are only averaged across the 80,000 grid point domain and not across the 3 day modelling period, they show larger differences at different times of the day. Averages at 2pm on the third day of the modelling period are summarized in Table \ref{tab:scenarioDiff}. These still show modest temperature reductions (around 0.1 to 0.2\SI{}{\degreeCelsius}) but of an order of magnitude larger than those averaged across the entire modelling period. Some slight warming at night of Scenario 4 would have offset some of the daytime temperature reductions in the 3 day average.
 
 \begin{table}[!htbp]
-\caption{\bf The difference in air temperature (average of the 80,000 grid points across the 3 day modellilng period) between WSUD scenarios for each climate scenario.  \label{tab:scenarioDiff}}     
-\begin{tabular}{ l l l l}
-\textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
+\caption{\bf The difference in air temperature (average of the 80,000 grid points) across the 3 day modelling period and at 2pm on third day of the modelling period between WSUD scenarios for each climate scenario.  \label{tab:scenarioDiff}}     
+\begin{tabular}{ l l l l l l l}
+ \hline  \multicolumn{1}{|c}{}   &  \multicolumn{3}{|c|}{\textbf{3 day average}} & \multicolumn{3}{c|}{\textbf{2pm of third day average}}  \\
+\textbf{Scenario difference} 
+& \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
-& \textbf{Extreme (\SI{}{\degreeCelsius})}\\ \hline
-Scenario 1 minus Scenario 2 & 0.0  & 0.0 & 0.0\\ 
-Scenario 3 minus Scenario 2 & -0.04  & -0.03 & -0.03\\ 
-Scenario 4 minus Scenario 2 & -0.02  & -0.01 & -0.02\\ 
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+& \textbf{Cool (\SI{}{\degreeCelsius})}
+& \textbf{Average (\SI{}{\degreeCelsius})}
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+\\ \hline
+Scenario 1 minus Scenario 2 & 0.0  & 0.0 & 0.0       &0.017&0.016&0.045\\ 
+Scenario 3 minus Scenario 2 & -0.04  & -0.03 & -0.03 &-0.082&-0.077&-0.129\\ 
+Scenario 4 minus Scenario 2 & -0.02  & -0.01 & -0.02 &-0.079&-0.074&-0.226\\ 
 \hline
 \end{tabular}
 \end{table}
 
-TODO, also calculate difference at single point in time at 3pm
+						
+								
 
-Overall, the WSUD implemented in Scenario 3 can reduce the 2m air temperature by 0.04\SI{}{\degreeCelsius} during cool summer days, 0.03\SI{}{\degreeCelsius} during average summer days and 0.03\SI{}{\degreeCelsius} during extreme summer days. The noteworthy result is that WSUD is most effective during a cool summer day. To investigate this result, simulations where the whole domain consists of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
+
+
+\begin{figure}[!htbp]
+\centering   
+\includegraphics[scale=0.25]{images/temperatures/SunburyAll}
+\caption{\bf Differences in air temperatures (\SI{}{\degreeCelsius}) (averaged across 80,000 domain grid points) for a) Cool, b) Average, and c) Extreme climate scenarios over the 3 day modelling period. }    
+ \label{fig:diff_air_temp} 
+\end{figure} 
+
+
+Overall, the WSUD implemented in Scenario 3 can reduce the 2m air temperature by 0.04\SI{}{\degreeCelsius} during cool summer days, 0.03\SI{}{\degreeCelsius} during average summer days and 0.03\SI{}{\degreeCelsius} during extreme summer days, with larger temperature reductions of 0.1 to 0.2\SI{}{\degreeCelsius} during the hottest part of the day.
+
+
+TODO the next paragraph isn't quite right with the 2pm averages. The Extreme days cool the most.
+
+The noteworthy result is that WSUD is most effective during a cool summer day. To investigate this result, simulations where the whole domain consists of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
 
 In these scenarios (Figures \ref{fig:surface_air_temps}a and b), it can be seen that during the cool days there is a clear difference in air temperature between the warmest land surface categories: road, concrete, and dry grass. In contrast, during extreme days the differences are much smaller between the categories. We hypothesise that during extreme days every surface type is extremely hot regardless of whether it is irrigated grass or concrete, accounting for the smaller difference in temperature from the high WSUD scenario during extreme days.
 
@@ -368,7 +391,7 @@ b)\includegraphics[scale=0.40]{images/fig1b}
 
 
 \subsection{A small representative urban portion}\label{sec:result_rep_urban}
-Averaging results over the whole domain is not necessarily representative of what would be experienced by a resident of the suburb, particularly since a large portion of the modelling domain is surrounding grasslands. Therefore, we conducted an analysis on a small representative urban portion (designated area of interest (AOI)), of the domain (highlighted in Figure \ref{fig:temp_diff_repre}), the results of which are discussed in this section. Also, all results discussed in Sections \ref{sec:results_htc} and \ref{sec:results_econ} are from the AOI.
+Averaging results over the whole domain is not necessarily representative of what would be experienced by a resident of the suburb, particularly since a large portion of the modelling domain is surrounding grasslands. Therefore, we conducted an analysis on a small representative urban portion (designated area of interest (AOI)), of the domain (highlighted in Figure \ref{fig:temp_diff_repre}), the results of which are discussed in this section. Also, all results discussed in Section \ref{sec:results_htc} are from the AOI.
 
 \begin{figure}[!htbp]
 \centering   
@@ -381,14 +404,20 @@ The air temperature difference (averaged across the AOI during the three day sce
 
 
 \begin{table}[!htbp]
-\caption{\bf The difference in air temperature between the WSUD Scenarios for each Climate Scenario, averaged across the AOI during the three day scenario. \label{tab:scenarioDiffRep}}     
-\begin{tabular}{ l l l l}
-\textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
+\caption{\bf The difference in air temperature between the WSUD Scenarios for each Climate Scenario, averaged across the AOI during the three day scenario and at 2pm on the third day of the scenario. \label{tab:scenarioDiffRep}}     
+\begin{tabular}{ l l l l l l l}
+ \hline  \multicolumn{1}{|c}{}   &  \multicolumn{3}{|c|}{\textbf{3 day average}} & \multicolumn{3}{c|}{\textbf{2pm of third day average}}  \\
+\textbf{Scenario difference} 
+& \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
-& \textbf{Extreme (\SI{}{\degreeCelsius})}\\ \hline
-Scenario 1 minus Scenario 2 & 0.0  & 0.0 & 0.0\\ 
-Scenario 3 minus Scenario 2 & -0.12  & -0.10 & -0.10\\ 
-Scenario 4 minus Scenario 2 & -0.51  & -0.40 & -0.31\\ 
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+& \textbf{Cool (\SI{}{\degreeCelsius})}
+& \textbf{Average (\SI{}{\degreeCelsius})}
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+\\ \hline
+Scenario 1 minus Scenario 2 & 0.0  & 0.0 & 0.0 &-0.012&-0.010&-0.004\\ 
+Scenario 3 minus Scenario 2 & -0.12  & -0.10 & -0.10&-0.256&-0.239&-0.264\\ 
+Scenario 4 minus Scenario 2 & -0.51  & -0.40 & -0.31&-0.888&-0.826&-0.688\\ 
 \hline
 \end{tabular}
 \end{table}
@@ -421,17 +450,25 @@ The difference in \glssymbol{UTCI} between Scenarios 1 and 2 show that Scenario 
 
 
 \begin{table}[!htbp]
-\caption{\bf The difference in \glssymbol{UTCI} temperature between the WSUD Scenarios for each climate scenario for the AOI. \label{tab:scenarioDiffRep2}}     
-\begin{tabular}{ l l l l}
-\textbf{Scenario difference} & \textbf{Cool (\SI{}{\degreeCelsius})}
+\caption{\bf The difference in \glssymbol{UTCI} temperature between the WSUD Scenarios for each climate scenario for the AOI averaged across the three day scenario and at 2pm on the third day. \label{tab:scenarioDiffRep2}}     
+\begin{tabular}{ l l l l l l l}
+ \hline  \multicolumn{1}{|c}{}   &  \multicolumn{3}{|c|}{\textbf{3 day average}} & \multicolumn{3}{c|}{\textbf{2pm of third day average}}  \\
+\textbf{Scenario difference} 
+& \textbf{Cool (\SI{}{\degreeCelsius})}
 & \textbf{Average (\SI{}{\degreeCelsius})}
-& \textbf{Extreme (\SI{}{\degreeCelsius})}\\ \hline
-Scenario 1 minus Scenario 2 & -0.02  & -0.01 & -0.02\\ 
-Scenario 3 minus Scenario 2 & -0.22  & -0.19 & -0.14\\ 
-Scenario 4 minus Scenario 2 & -0.81  & -0.68 & -0.38\\ 
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+& \textbf{Cool (\SI{}{\degreeCelsius})}
+& \textbf{Average (\SI{}{\degreeCelsius})}
+& \textbf{Extreme (\SI{}{\degreeCelsius})}
+\\ \hline
+Scenario 1 minus Scenario 2 & -0.02  & -0.01 & -0.02 &-0.015&-0.032&-0.004\\ 
+Scenario 3 minus Scenario 2 & -0.22  & -0.19 & -0.14 &-0.627&-0.388&-0.381\\ 
+Scenario 4 minus Scenario 2 & -0.81  & -0.68 & -0.38 &-2.123&-1.200&-1.009\\ 
 \hline
 \end{tabular}
 \end{table}
+
+
 
 Scenario 4 was designed to produce 2\SI{}{\degreeCelsius} of cooling and this is achieved when considering the spatial difference in \glssymbol{UTCI} compared to Scenario 2 at midday (Figure \ref{fig:fig4}). The 2\SI{}{\degreeCelsius} of cooling is almost everywhere during the Cool Scenarios and less pervasive in the Average and Extreme Scenarios, but these results are still significant. A reduction in \glssymbol{UTCI} of 2\SI{}{\degreeCelsius} has the potential to save many lives during summer (CITE).
 
