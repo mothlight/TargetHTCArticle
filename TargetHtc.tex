@@ -148,18 +148,26 @@ micro-climate modelling, urban vegetation, human thermal comfort, TARGET model, 
 
 
 \section{Introduction}\label{sec:introduction}
+\subsection{Urban challenges}
 
--Urban heat, a bad thing
+Growing urban populations present a challenge to urban planners, policy makers, and urban residents. World-wide, populations of cities have been growing while population densities fall and urban footprints grow \citep{Roberts2007}. In Australia, Melbourne is expected to grow from 4.5 to 8 million residents by 2051 and will need 1.6 million new homes to accommodate this growth \citep{VictoriaStateGovernment2017}. While governments have tried to contain urban sprawl by densifying compact cities, planning and growth continues to convert and develop greenspace on the urban fringes into urban growth areas \citep{GrowthAreasAuthority2009}.
 
--CSUD/WSUD proposed for urban cooling
+This urban development amplifies existing problems of urban heat. Vegetation and natural surfaces are replaced with impervious surfaces with high heat storage capacity. The removal of vegetation and alteration of the water cycle (increased run-off and reduced infiltration) creates drier and less shaded areas. The combination of these can lead to an urban heat island (UHI) effect in which urban areas are significantly warmer (especially at night) than surrounding rural areas (i.e. the areas the greenfill developments replaced) \citep{Coutts2010,Oke1982}. Further, the frequency and intensity of heatwaves is projected to increase under climate change \citep{Alexander2009}, magnifying the effects of UHI \citep{Rogers2018}, in already vulnerable highly populated areas \citep{Lemonsu2015}.
 
+\subsection{Impacts of increased urban heat}
+Increased urban heat (and the magnifying impacts of UHI) have far ranging impacts on the health and well being of urban residents. Heat causes significant increases in mortality and morbidity as daily temperatures cross threshold temperatures \citep{Nicholls2008}. Suicides increase as cities heat up \citep{Burke2018a} and learning in school-aged children is impacted negatively \citep{Goodman2018}. Levels of physical activity decrease as the walkability of areas reduces because of decreased human thermal comfort (HTC) and lack of shading vegetation canopies \citep{Millington2009,Gallin2001,LSA2003}. This physical inactivity brings with it poor public health outcomes and increased strain on public health systems  \citep{Davison2008,Lee2008b,Warburton2006,WHO2010}.
 
+Climate sensitive urban design (CSUD) has been proposed as an intervention (and guiding design principle) to help address urban heat \citep{Coutts2012,Oke2017}. It incorporates water sensitive urban design (WSUD) \citep{Wong2009} to provide water to support increased urban vegetation, increasing human thermal comfort, mitigating UHI and heat wave health issues \citep{Bowler2010}. Evaluating how much potential cooling benefits CSUD can provide, especially in newly developed greenfill sites, has been little studied up to this point.
 
-The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGET) model \citep{Broadbent2018} is a model designed to be efficient and accessible while providing accurate calculations of urban surface temperatures and street level air temperature at micro-to-local scales. The model has been designed specifically to assess the cooling effects of green/blue (urban vegetation and water) infrastructure. Its efficiency means that modelling domains of tens of thousands of grid points can calculate weeks worth of simulation in seconds to minutes. The accessibility allows modelling scenarios to be created from simple land cover class fractions and a few basic parameters.
+\subsection{Evaluating the benefits of climate sensitive urban design}
+Quantifying the cooling potential of CSUD/WSUD requires a tool. The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGET) model \citep{Broadbent2018} is a model designed to be efficient and accessible while providing accurate calculations of urban surface temperatures and street level air temperature at micro-to-local scales. 
 
-However, in the present version, TARGET could only calculate surface and air temperatures. As part of this study, the ability to calculate human thermal comfort indexes, specifically \glssymbol{UTCI} as well as the mean radiant temperature \glssymbol{Tmrt} needed to calculate \glssymbol{UTCI} were added to TARGET.
+The model has been designed specifically to assess the cooling effects of the green/blue (urban vegetation and water) infrastructure provided by CSUD. TARGET's efficiency means that modelling domains of tens of thousands of grid points can calculate weeks worth of simulation in seconds to minutes. The accessibility allows modelling scenarios to be created from simple land cover class fractions and a few basic parameters.
 
-The main aims of this paper are the following: 1) can the TARGET model accurately predict (spatially and temporally) HTC in a variety of urban street canyons? and 2) what is the potential for WSUD/CSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
+However TARGET v1.0 previously could only calculate surface and air temperatures. As part of this study, the ability to calculate human thermal comfort indexes, specifically \glssymbol{UTCI} as well as the mean radiant temperature \glssymbol{Tmrt} needed to calculate \glssymbol{UTCI} were added to TARGET and evaluated for suitability to accurately model CSUD.
+
+\subsection{Research aims}
+The main aims of this study are the following: 1) can the TARGET model accurately predict (spatially and temporally) HTC in a variety of urban street canyons? and 2) what is the potential for CSUD/WSUD for urban cooling and positive impacts on HTC at a precinct and micro-climate scale?
 
 
 
@@ -400,7 +408,7 @@ Averaging results over the whole domain is not necessarily representative of wha
  \label{fig:temp_diff_repre} 
 \end{figure}
 
-The air temperature difference (averaged across the AOI during the three day scenario) between Scenarios 1, 3, and 4 and Scenario 2, the control case, are shown in Table \ref{tab:scenarioDiffRep}. These results are much more significant and align with expectations that Scenario 4 would produce the most cooling, followed by Scenario 3. The policy goal of Scenario 3 produces cooling of ~0.1\SI{}{\degreeCelsius} for each climate scenario. However, the efficacy of Scenario 4 is highly dependent on the climate scenario, producing an average cooling of 0.5\SI{}{\degreeCelsius} during the Cool Scenario, 0.4\SI{}{\degreeCelsius} during the Average Scenario and 0.3\SI{}{\degreeCelsius} during the Extreme Scenario. This follows the same logic from the previous section that the differences between each land surface category is larger during Cool summer days where WSUD can have a larger effect, but during Average and Extreme summer days all land surfaces (including vegetation and water) are warmer so it is harder for WSUD to create a cooling effect.
+The air temperature difference (averaged across the AOI during the three day scenario) between Scenarios 1, 3, and 4 and Scenario 2, the control case, are shown in Table \ref{tab:scenarioDiffRep}. These results are much more significant and align with expectations that Scenario 4 would produce the most cooling, followed by Scenario 3. The policy goal of Scenario 3 produces cooling of \textasciitilde 0.1\SI{}{\degreeCelsius} for each climate scenario. However, the efficacy of Scenario 4 is highly dependent on the climate scenario, producing an average cooling of 0.5\SI{}{\degreeCelsius} during the Cool Scenario, 0.4\SI{}{\degreeCelsius} during the Average Scenario and 0.3\SI{}{\degreeCelsius} during the Extreme Scenario. This follows the same logic from the previous section that the differences between each land surface category is larger during Cool summer days where WSUD can have a larger effect, but during Average and Extreme summer days all land surfaces (including vegetation and water) are warmer so it is harder for WSUD to create a cooling effect.
 
 
 \begin{table}[!htbp]
