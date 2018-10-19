@@ -107,6 +107,9 @@
 \ead{kerry.nice@unimelb.edu.au}
 \author[monash,crc,Mosiac]{Stephanie Jacobs}
 \author[az1,az2,monash,crc]{Ashley Broadbent}
+\author[monasheng]{Christian Urich}
+\author[monasheng]{Stefan Kitanovic}
+\author[monash,crc]{Nigel Tapper}
 
 
 
@@ -117,14 +120,14 @@
 \address[az2]{Urban Climate Research Center, Arizona State University, Tempe, Arizona, USA}
 \address[crc]{Cooperative Research Centre for Water Sensitive Cities, Melbourne, Australia}
 \address[Mosiac]{Mosiac Insights, Melbourne, Australia}
-
+\address[monasheng]{Department of Civil Engineering, Monash University, Clayton, VIC 3800, Australia}
 
 
 
 
 \begin{abstract}
 
-This is the abstract with some details.
+\textbf{TODO, This is the abstract with some details.}
 
 \end{abstract}
 
@@ -155,9 +158,11 @@ Growing urban populations present a challenge to urban planners, policy makers, 
 This urban development amplifies existing problems of urban heat. Vegetation and natural surfaces are replaced with impervious surfaces with high heat storage capacity. The removal of vegetation and alteration of the water cycle (increased run-off and reduced infiltration) creates drier and less shaded areas. The combination of these can lead to an urban heat island (UHI) effect in which urban areas are significantly warmer (especially at night) than surrounding rural areas (i.e. the areas the greenfill developments replaced) \citep{Coutts2010,Oke1982}. Further, the frequency and intensity of heatwaves is projected to increase under climate change \citep{Alexander2009}, magnifying the effects of UHI \citep{Rogers2018}, in already vulnerable highly populated areas \citep{Lemonsu2015}.
 
 \subsection{Impacts of increased urban heat}
-Increased urban heat (and the magnifying impacts of UHI) have far ranging impacts on the health and well being of urban residents. Heat causes significant increases in mortality and morbidity as daily temperatures cross threshold temperatures \citep{Nicholls2008}. Suicides increase as cities heat up \citep{Burke2018a} and learning in school-aged children is impacted negatively \citep{Goodman2018}. Levels of physical activity decrease as the walkability of areas reduces because of decreased human thermal comfort (HTC) and lack of shading vegetation canopies \citep{Millington2009,Gallin2001,LSA2003}. This physical inactivity brings with it poor public health outcomes and increased strain on public health systems  \citep{Davison2008,Lee2008b,Warburton2006,WHO2010}.
+Increased urban heat (and the magnifying impacts of UHI and heat waves) have far ranging impacts on the health and well being of urban residents. Heat causes significant increases in mortality and morbidity as daily temperatures cross threshold temperatures \citep{Nicholls2008}. Suicides increase as cities heat up \citep{Burke2018a} and learning in school-aged children is impacted negatively \citep{Goodman2018}. Levels of physical activity decrease as the walkability of areas reduce due to decreased human thermal comfort (HTC) and lack of shading vegetation canopies \citep{Millington2009,Gallin2001,LSA2003}. This physical inactivity brings with it poor public health outcomes and increased strain on public health systems  \citep{Davison2008,Lee2008b,Warburton2006,WHO2010}.
 
-Climate sensitive urban design (CSUD) has been proposed as an intervention (and guiding design principle) to help address urban heat \citep{Coutts2012,Oke2017}. It incorporates water sensitive urban design (WSUD) \citep{Wong2009} to provide water to support increased urban vegetation, increasing human thermal comfort, mitigating UHI and heat wave health issues \citep{Bowler2010}. Evaluating how much potential cooling benefits CSUD can provide, especially in newly developed greenfill sites, has been little studied up to this point.
+
+
+Climate sensitive urban design (\glssymbol{csud}) has been proposed as an intervention (and guiding design principle) to help address urban heat \citep{Coutts2012,Oke2017}. It incorporates water sensitive urban design (\glssymbol{wsud}) \citep{Wong2009} to provide water to support increased urban vegetation, increasing human thermal comfort, mitigating UHI and heat wave health issues \citep{Bowler2010}. Evaluating how much potential cooling benefits CSUD can provide (including HTC), especially in newly developed greenfill sites, has been little studied up to this point.
 
 \subsection{Evaluating the benefits of climate sensitive urban design}
 Quantifying the cooling potential of CSUD/WSUD requires a tool. The Air-temperature Response to Green/blue-infrastructure Evaluation Tool (TARGET) model \citep{Broadbent2018} is a model designed to be efficient and accessible while providing accurate calculations of urban surface temperatures and street level air temperature at micro-to-local scales. 
@@ -239,7 +244,9 @@ Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEval
 
 
 \subsection{WSUD scenarios}\label{sec:methods_wsudscenarios}
-An aim of this project is to calculate the economic benefit of the cooling from WSUD for a future greenfill suburb in north-western Melbourne. To achieve this, four WSUD land cover scenarios were designed for the north-western Melbourne suburb (TODO, do we cite or include as coauthors E2Design and/or Christian Ulrich). Each scenario represents a differing level of WSUD infrastructure with Scenario 1 containing no WSUD, Scenario 2 models the current levels of WSUD (the control scenario), and Scenario 3 represents the current WSUD policy aim for the suburb. The last scenario, Scenario 4, is a scenario that tries to maximize the use of WSUD to hopefully obtain 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb.
+An aim of this study is to calculate the potential cooling from WSUD using a future greenfill suburb in north-western Melbourne. To achieve this, four WSUD land cover scenarios were designed for the north-western Melbourne suburb. Each scenario represents a differing level of WSUD infrastructure with Scenario 1 containing no WSUD, Scenario 2 models the current levels of WSUD (the control scenario), and Scenario 3 represents the current WSUD policy aim for the suburb. The last scenario, Scenario 4, is a scenario that tries to maximize the use of WSUD to hopefully obtain 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb.
+
+\textbf{TODO, include more detail from Christian Urich and Stefan Kitanovic about making the scenarios }
 
 Each WSUD scenario (land cover fractions summarized in Table \ref{tab:parameters}) for the suburb is different due to the makeup of the urban surface, which is fed into the TARGET model. Land surface categories in TARGET include fractions of roof, road, concrete, water bodies, vegetation/trees, dry grass, and irrigated grass. The proportion of irrigated grass and vegetation are higher and dry grass fraction is lower in Scenario 4 compared to Scenario 2 due to more WSUD in the landscape. The average fractions of the land surface categories add up to more than 1 for the scenarios (Table \ref{tab:parameters}), but for each individual grid point, the sum of the fractions is 1.
 
@@ -283,12 +290,12 @@ In total, 12 scenarios were run, combining every permutation of the four WSUD sc
 %
 %An economic model was created.
 
-\section{Results}
+\section{Evaluation and scenario results and discussion}
 
-\subsection{Evaluation of added TARGET \glssymbol{Tmrt} and \glssymbol{UTCI} functionality}
+\subsection{Evaluation of added TARGET \glssymbol{Tmrt} and \glssymbol{UTCI} functionality}\label{sec:eval-htc}
 
 
-Modelled predictions for the George St. observation locations (TRD 2, TRD 3, TRD 4, and TRD 5) and Gipps St. observation locations (OPN 3, OPN 4, and OPN 5) were extracted from the results of the GeorgeEvaluation and GippsEvaluation scenarios and compared to the observations for those locations. These are presented in Figures \ref{fig:tmrteval} and \ref{fig:utcieval}. Statistical analysis (RMSE, MBE, MAE, and d index of agreement) for these four and three locations for \glssymbol{Tmrt} and \glssymbol{UTCI} are summarised in Table \ref{tab:georgetmrt}.
+Modelled predictions for the George St. observation locations (TRD2, TRD3, TRD4, and TRD5) and Gipps St. observation locations (OPN3, OPN4, and OPN5) were extracted from the results of the GeorgeEvaluation and GippsEvaluation scenarios and compared to the observations for those locations. These are presented in Figures \ref{fig:tmrteval} and \ref{fig:utcieval}. Statistical analysis (RMSE, MBE, MAE, and d index of agreement) for these four and three locations for \glssymbol{Tmrt} and \glssymbol{UTCI} are summarised in Table \ref{tab:georgetmrt}.
 
 \begin{figure}[!htbp]
 a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-Tmrt.png}
@@ -324,25 +331,25 @@ a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI.png
 	& \textbf{MAE}
 	& \textbf{d}	
 	\\ \hline
-TRD\_2 & 4.18 & -1.07 & 2.71 & 0.963 & 2.18 & -1.32 & 1.69 & 0.960  \\ \hline
-TRD\_3 & 5.92 & -0.55 & 3.62 & 0.922 & 2.66 & -1.47 & 2.01 & 0.940  \\ \hline
-TRD\_4 & 7.18 & -3.70 & 4.89 & 0.922 & 3.05 & -2.04 & 2.33 & 0.935  \\ \hline
-TRD\_5 & 4.93 & -1.37 & 3.00 & 0.955 & 2.97 & -1.93 & 2.25 & 0.931  \\ \hline
-OPN\_3 & 7.05 & -3.53 & 4.83 & 0.927 & 2.59 & -1.61 & 1.88 & 0.955   \\ \hline
-OPN\_4 & 7.18 & -4.32 & 4.88 & 0.924 & 2.63 & -1.81 & 2.03 & 0.951  \\ \hline
-OPN\_5 & 7.31 & -3.75 & 4.96 & 0.922 & 2.59 & -1.59 & 1.90 & 0.954  \\ \hline
+TRD2 & 4.18 & -1.07 & 2.71 & 0.963 & 2.18 & -1.32 & 1.69 & 0.960  \\ \hline
+TRD3 & 5.92 & -0.55 & 3.62 & 0.922 & 2.66 & -1.47 & 2.01 & 0.940  \\ \hline
+TRD4 & 7.18 & -3.70 & 4.89 & 0.922 & 3.05 & -2.04 & 2.33 & 0.935  \\ \hline
+TRD5 & 4.93 & -1.37 & 3.00 & 0.955 & 2.97 & -1.93 & 2.25 & 0.931  \\ \hline
+OPN3 & 7.05 & -3.53 & 4.83 & 0.927 & 2.59 & -1.61 & 1.88 & 0.955   \\ \hline
+OPN4 & 7.18 & -4.32 & 4.88 & 0.924 & 2.63 & -1.81 & 2.03 & 0.951  \\ \hline
+OPN5 & 7.31 & -3.75 & 4.96 & 0.922 & 2.59 & -1.59 & 1.90 & 0.954  \\ \hline
   \end{tabular} 
 \end{table}
 \end{center} 
 
-Statistics for Gipps St., a street with an open canopy, show very similar results for each location, with d index of agreement values ranging from 0.922 to 0.927 for \glssymbol{Tmrt} and 0.951 to 0.955 for \glssymbol{UTCI}. George St. shows a slightly wider range of results with d index of agreement values ranging from 0.922 to 0.963 for \glssymbol{Tmrt} and 0.931 to 0.960 for \glssymbol{UTCI}. Slightly more accurate results for \glssymbol{Tmrt} for locations with morning shade and afternoon sun (TRD\_2 and TRD\_5) compared to the other locations with full sun. The most accurate predictions of \glssymbol{UTCI} were for TRD\_2, a location with more shading than the other TRD locations. 
+Statistics for Gipps St., a street with an open canopy, show very similar results for each location, with d index of agreement values ranging from 0.922 to 0.927 for \glssymbol{Tmrt} and 0.951 to 0.955 for \glssymbol{UTCI}. George St. shows a slightly wider range of results with d index of agreement values ranging from 0.922 to 0.963 for \glssymbol{Tmrt} and 0.931 to 0.960 for \glssymbol{UTCI}. Slightly more accurate results for \glssymbol{Tmrt} for locations with morning shade and afternoon sun (TRD2 and TRD5) compared to the other locations with full sun. The most accurate predictions of \glssymbol{UTCI} were for TRD2, a location with more shading than the other TRD locations. 
 
 Overall, the results show that the new HTC module in TARGET performs well is suitable to make HTC predictions for a variety of urban scenarios.
 
 \subsection{Results of whole domain WSUD scenarios}\label{sec:whole_domain}
 After the new functionality in the TARGET model has been evaluated to ensure accurate predictions, we turn to the results of the WSUD scenarios. 
 
-The results of each of the scenarios were averaged across the entire 80,000 grid point domain for the 3 day modelling period. The difference in air temperature between WSUD Scenarios 1,3,4 and the control case Scenario 2, are shown for each climate scenario in Table \ref{tab:scenarioDiff}. Scenario 3 produced the most cooling in each climate scenario compared to the base case of Scenario 2, followed by Scenario 4. This was unexpected and suggests that for the whole domain the highest WSUD Scenario does not produce as much cooling throughout the three simulated days. However, the cooling produced in these simulations is extremely small, and may not be physical. There was no difference in temperature between Scenarios 1 and 2. 
+The results of each of the scenarios were averaged across the entire 80,000 grid point domain for the 3 day modelling period. The difference in air temperature between WSUD Scenarios 1,3,4 and the control case Scenario 2, are shown for each climate scenario in Table \ref{tab:scenarioDiff}. Scenario 3 produced the most cooling in each climate scenario compared to the base case of Scenario 2, followed by Scenario 4. This was unexpected and suggests that for the whole domain, the highest WSUD Scenario does not produce as much cooling throughout the three simulated days. However, the cooling produced in these simulations is extremely small, and may not be physical. There was no difference in temperature between Scenarios 1 and 2. 
 
 Figure \ref{fig:diff_air_temp} shows differences in air temperature between the 4 WSUD scenarios for each of the 3 climate scenarios. As these are only averaged across the 80,000 grid point domain and not across the 3 day modelling period, they show larger differences at different times of the day. Averages at 2pm on the third day of the modelling period are summarized in Table \ref{tab:scenarioDiff}. These still show modest temperature reductions (around 0.1 to 0.2\SI{}{\degreeCelsius}) but of an order of magnitude larger than those averaged across the entire modelling period. Some slight warming at night of Scenario 4 would have offset some of the daytime temperature reductions in the 3 day average.
 
@@ -381,9 +388,9 @@ Scenario 4 minus Scenario 2 & -0.02  & -0.01 & -0.02 &-0.079&-0.074&-0.226\\
 Overall, the WSUD implemented in Scenario 3 can reduce the 2m air temperature by 0.04\SI{}{\degreeCelsius} during cool summer days, 0.03\SI{}{\degreeCelsius} during average summer days and 0.03\SI{}{\degreeCelsius} during extreme summer days, with larger temperature reductions of 0.1 to 0.2\SI{}{\degreeCelsius} during the hottest part of the day.
 
 
-TODO the next paragraph isn't quite right with the 2pm averages. The Extreme days cool the most.
 
-The noteworthy result is that WSUD is most effective during a cool summer day. To investigate this result, simulations where the whole domain consists of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
+
+The noteworthy result is that WSUD is most effective across a diurnal cycle during a cool summer day. However, WSUD shows a good response during the hottest parts of the day and shows larger cooling differentials on the extreme and average days. To further investigate these results, simulations where the whole domain consists of one land surface category were performed for each climate scenario. This was to understand how each land surface type responded to the cool, average and extreme summer days.
 
 In these scenarios (Figures \ref{fig:surface_air_temps}a and b), it can be seen that during the cool days there is a clear difference in air temperature between the warmest land surface categories: road, concrete, and dry grass. In contrast, during extreme days the differences are much smaller between the categories. We hypothesise that during extreme days every surface type is extremely hot regardless of whether it is irrigated grass or concrete, accounting for the smaller difference in temperature from the high WSUD scenario during extreme days.
 
@@ -399,7 +406,7 @@ b)\includegraphics[scale=0.40]{images/fig1b}
 
 
 \subsection{A small representative urban portion}\label{sec:result_rep_urban}
-Averaging results over the whole domain is not necessarily representative of what would be experienced by a resident of the suburb, particularly since a large portion of the modelling domain is surrounding grasslands. Therefore, we conducted an analysis on a small representative urban portion (designated area of interest (AOI)), of the domain (highlighted in Figure \ref{fig:temp_diff_repre}), the results of which are discussed in this section. Also, all results discussed in Section \ref{sec:results_htc} are from the AOI.
+Averaging results over the whole domain is not necessarily representative of what would be experienced by a resident of the suburb, particularly since a large portion of the modelling domain is surrounding grasslands. Therefore, we conducted an analysis on a small representative urban portion (designated area of interest (AOI)), of the domain (highlighted in orange in Figure \ref{fig:temp_diff_repre}), the results of which are discussed in this section. Also, all further results discussed in Section \ref{sec:results_htc} are from the AOI.
 
 \begin{figure}[!htbp]
 \centering   
@@ -478,7 +485,7 @@ Scenario 4 minus Scenario 2 & -0.81  & -0.68 & -0.38 &-2.123&-1.200&-1.009\\
 
 
 
-Scenario 4 was designed to produce 2\SI{}{\degreeCelsius} of cooling and this is achieved when considering the spatial difference in \glssymbol{UTCI} compared to Scenario 2 at midday (Figure \ref{fig:fig4}). The 2\SI{}{\degreeCelsius} of cooling is almost everywhere during the Cool Scenarios and less pervasive in the Average and Extreme Scenarios, but these results are still significant. A reduction in \glssymbol{UTCI} of 2\SI{}{\degreeCelsius} has the potential to save many lives during summer (CITE).
+Scenario 4 was designed to produce 2\SI{}{\degreeCelsius} of cooling and this is achieved when considering the spatial difference in \glssymbol{UTCI} compared to Scenario 2 at midday (Figure \ref{fig:fig4}). The 2\SI{}{\degreeCelsius} of cooling is almost everywhere during the Cool Scenarios and less pervasive in the Average and Extreme Scenarios, but these results are still significant. A reduction in \glssymbol{UTCI} of 2\SI{}{\degreeCelsius} has the potential to save many lives during summer \citep{Nicholls2008}.
 
 
 \begin{figure}[!htbp]
@@ -496,38 +503,34 @@ c)\includegraphics[scale=0.30,trim = 0mm 0mm 0mm 8mm,clip]{images/fig4c}
 \end{figure} 
 
 
-%\subsection{Data for economic analysis}\label{sec:results_econ}
-%To conduct the economic evaluation of the cooling from WSUD the maximum and minimum temperatures from a cool, average and extreme summer were reconstructed based on the modelling results from the four WSUD Scenarios and three Climate Scenarios. First, average summer temperatures (Dec - Feb) for Victoria were ranked from 1910-2017 and a typical cool summer (1986-87), an average summer (1971-1972) and an extreme summer (2008-2009) were identified. Maximum and minimum temperature data from Melbourne Airport weather station was then obtained for all 90 days (or 91 days for 1971-1972) of the three summers. The aim was to recreate the temperature during these summers if WSUD was present at the time, ie map the temperatures for the cases of Scenarios 1, 3 and 4, where Scenario 2 is observations. This was achieved by selecting the maximum and minimum temperature for each WSUD Scenario from the middle day of the Cool, Average and Extreme three day Scenarios described in Section \ref{sec:methods_wsudscenarios}. Using this data a linear interpolation was performed which creates an algorithm whereby data fed into the algorithm acts based on how much cooling each WSUD Scenario produced in each Climate Scenario. For example, data fed into the algorithm will have a larger reduction in temperature for cool days than extremely hot days, because the WSUD Scenarios are more effective during cool summer days than hot summer days. Hence, December 1 2008 had a maximum temperature of 21.1\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 19.7\SI{}{\degreeCelsius}, a difference of 1.4\SI{}{\degreeCelsius}. Furthermore, February 27 2009 had a temperature of 35.5\SI{}{\degreeCelsius} but if WSUD Scenario 4 was implemented the algorithm says that the temperature would have been 34.8\SI{}{\degreeCelsius}, a difference of 0.7\SI{}{\degreeCelsius}, showing that Scenario 4 is less effective on hotter days, as the modelling results showed.
-%
-%The maximum and minimum temperature from the typical cool (1986-87), average (1971-1972) and extreme summers (2008-2009) were put through the algorithm and the output was used to conduct the economic analysis. Figure \ref{fig:fig5}a is an example of this output for the 2008-2009 summer comparing the maximum temperatures of Scenario 2 (observations) and if there had of been a Scenario 4 level of WSUD present. The largest differences occur during the cooler days and the smallest differences occur on the hottest days. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event. Figure \ref{fig:fig5}b shows the same output for the minimum temperature where the differences between the scenarios is small.
-%
-%
-%
-%\begin{figure}[!htbp]
-%\centering   
-%\includegraphics[scale=0.40]{images/fig5a}
-%~
-%\includegraphics[scale=0.40]{images/fig5b} 
-%\caption{\bf The observational (Scenario 2) and the WSUD Scenario 4 temperature mapped using linear interpolation for the (a) maximum and (b) minimum temperature. The two purple boxes indicate the January 28-30 2009 heatwave and the February 7 2009 Black Saturday event.}    
-% \label{fig:fig5} 
-%\end{figure} 
-
-
-
-\section{Discussion}\label{sec:discussion}
-
 \section{Conclusion}\label{sec:conclusion}
+This study had two main aims. The first was to determine TARGET's suitability to model WSUD cooling potential by evaluating the model's ability to accurately predict temporal and spatial values of HTC in a variety of urban settings. The second was to quantify these cooling potentials in terms of HTC at a precinct and micro-climate scale.
+
+The first aim was accomplished through the addition of \glssymbol{Tmrt} and \glssymbol{UTCI} calculations to TARGET (Section \ref{sec:tmrtutci}) and the evaluation of this new functionality (Sections \ref{sec:methods_eval} and \ref{sec:eval-htc}). The evaluation showed that TARGET was suitable to model the HTC impacts of blue/green infrastructure. Statistical comparisons with observed values of \glssymbol{Tmrt} and \glssymbol{UTCI} in two streets in Melbourne with varying amounts of canopy cover showed good results. Index of agreement values ranged from 0.92 to 0.96 for both streets and both parameters. Slightly better results were seen for shaded locations over those in full sun.
+
+After TARGET has been shown to be a suitable tool, the second aim proceeded to quantify the HTC cooling potentials of WSUD. Using four different WSUD scenarios (representing increasing levels of WSUD infrastructure interventions) under three different 3 day climate scenarios (cool, average, and extreme summer periods), results from the twelve were analysed. When results were averaged across the entire 3 day time period across the entire suburb, only small differences were found. Air temperatures only differed by 0.01 to 0.04\SI{}{\degreeCelsius}, with the larger differences seen with the cool climate scenario. However, in averaging the entire suburb at the hottest part of the modelling period (2 pm on the 3rd day), larger air temperature differences were seen, ranging from 0.01 to 0.2\SI{}{\degreeCelsius}. At this single point in time, more cooling was seen from the extreme and average climate scenarios over the cool scenarios.
+ 
+Further scenarios explored the differences between the different land cover classes (road, concrete, dry grass, irrigated grass, vegetation, and water bodies) by running each in isolation. Under extreme weather conditions, the differences in air temperature between the land cover classes were much smaller than under cool conditions. We hypothesise that in extreme conditions, all of the surfaces are overwhelmed by heat.
+
+Averaging results across the entire suburb is not necessarily representative of what somebody living in the suburb would experience day to day, so the last set of results only focused on a small representative area of interest (AOI). The cooling effects were seen to be much more pronounced when the less relevant portions of the suburb were excluded. Averages of air temperature reductions across the 3 day period across the AOI again repeated the pattern seen of larger cooling magnitudes under the cool scenario than the extreme, with Scenario 4 delivering 0.51, 0.40, and 0.31\SI{}{\degreeCelsius} of air temperature reductions for the cool, average, and extreme scenarios respectively. When looking at the average temperature reduction across the AOI at the hottest part of the modelling period (2 pm on the 3rd day), the cooling becomes more pronounced with cooling of 0.9, 0.8, and 0.7\SI{}{\degreeCelsius} for the three climate scenarios respectively.
+
+Larger reductions were expected in the AOI over the entire suburb because the WSUD interventions were largely concentrated in the residential zones rather than the surrounding grasslands. The differences between averaging across the 3 day modelling period and comparing the hottest point highlight that in terms of air temperature, WSUD interventions have little effect at night.
+
+When looking at the HTC impacts of WSUD interventions (as measured by UTCI), the cooling potentials become more substantial. This is where the interventions have a stronger impact on \glssymbol{Tmrt} (an important component of UTCI, creating cooler surfaces. Reductions with Scenario 4 at the hottest part of the modelling period (2 pm on the 3rd day) achieve reductions in UTCI of 2.1, 1.2 and 1.0\SI{}{\degreeCelsius} for the cool, average, and extreme scenarios respectively. 
+
+\textbf{TODO draw some more conclusions.}
+
+\section{Code availability and licensing}\label{sec:available}
+
+TARGET is distributed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 Generic (CC BY-NC-SA 4.0). TARGET code cannot be used for commercial purposes. It is available in two versions, Python or Java. The Python code can be downloaded from https://doi.org/10.5281/zenodo.1300023 or Java code is available at  https://zenodo.org/record/1310138. We recommend using the Java version as it runs faster than the Python code. 
 
 
-
-
-
-\section{Code availability}\label{sec:available}
 
 \printglossary[title={List of Symbols}]
 
 \section*{Acknowledgements}
-The support of the Commonwealth of Australia through the Cooperative Research Centre program is acknowledged.
+The support of the Commonwealth of Australia through the Cooperative Research Centre program is acknowledged. At Monash University, Ashley Broadbent, Stephanie Jacobs, and Kerry Nice were funded by the Cooperative Research Centre for Water Sensitive Cities, an Australian Government initiative. While at Arizona State University, Ashley Broadbent was supported by NSF Sustainability Research Network (SRN) Cooperative Agreement 1444758, NSF grant EAR-1204774, and NSF SES-1520803. While at the University of Melbourne, Kerry Nice was funded by the Transport, Health, and Urban Design (THUD) Hub. 
+ 
 %\end{acknowledgements}
 
 \section*{References}\label{sec:ref}
