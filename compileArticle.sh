@@ -13,6 +13,29 @@ cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll.png images/tempe
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_UTCI.png images/temperatures
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_UTCI_AOI.png images/temperatures
 
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury1.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury2.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury3.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury4.png images/
+
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff12.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff23.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff34.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff13.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff14.png images/
+
+
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury1_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury2_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury3_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/Sunbury4_Small.png images/
+
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff12_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff23_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff34_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff13_Small.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff14_Small.png images/
+
 rm TargetHtc.glsdefs
 bibtex TargetHtc.aux
 makeglossaries  TargetHtc
