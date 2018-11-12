@@ -36,6 +36,12 @@ cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff34_Sma
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff13_Small.png images/
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/SunburyLC/SunburyDiff14_Small.png images/
 
+
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/Kd.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/RH.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/Ta.png images/
+cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/WS.png images/
+
 rm TargetHtc.glsdefs
 bibtex TargetHtc.aux
 makeglossaries  TargetHtc

@@ -245,162 +245,58 @@ Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEval
 Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values for \glssymbol{Tmrt} and \glssymbol{UTCI} were extracted from the modelled output and compared to the same locations of the observations. Comparisons with the observations were performed using the \cite{Willmott1981} d index of agreement as well as calculating mean absolute error (MAE), mean bias error (MBE), and root-mean-square error (RMSE) statistics.
 
 
+% For example, the introduction of flow requirements proposed under BPEM guidelines (investigated as part of scenario 3 proposed changes for IWM regulation) could be achieved through extensive stormwater harvesting or green infrastructure that promotes significant infiltration and evapotranspiration losses.  Climate, soils, terrain, availability of recycled water as an alternative water supply (and drivers for its use) etc. will influence the urban design outcomes and inform the optimal infrastructure arrangement to deliver each scenario.  
+%  (Clause 56:07 of the Victorian Planning Provisions and 6 star building code).
+% Proposed changes for IWM regulation: landscape features that could be used to deliver the anticipated changes to IWM regulation for both BPEM and Building Codes, along with any other expected regulatory changes.  This could include passively irrigated street trees, wetlands, evapotranspiration fields and 100% uptake of rainwater tanks used to irrigate private gardens (and toilet flushing).  
+
+
 
 
 \subsection{WSUD scenarios}\label{sec:methods_wsudscenarios}
-An aim of this study is to calculate the potential cooling from WSUD using a future greenfill suburb in north-western Melbourne. To achieve this, four WSUD land cover scenarios were designed for the north-western Melbourne suburb. Each scenario represents a differing level of WSUD infrastructure with Scenario 1 containing no WSUD, Scenario 2 models the current levels of WSUD (the control scenario), and Scenario 3 represents the current WSUD policy aim for the suburb. The last scenario, Scenario 4, is a scenario that tries to maximize the use of WSUD to hopefully obtain 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb. Scenario land covers are shown in Figure \ref{fig:sunburyScenarios} with the area of interest (AOI) highlighted with a black box. 
-
-\textbf{TODO, include more detail from Christian Urich and Stefan Kitanovic about making the scenarios }
-
-
+An aim of this study is to calculate the potential cooling from WSUD using a future greenfill suburb in north-western Melbourne. To achieve this, three WSUD land cover scenarios were designed for the north-western Melbourne suburb. Each scenario represents a differing level of WSUD infrastructure with Scenario 1 (designated NONE) containing no WSUD (the base case) and Scenario 3 (designated FUTURE) represents proposed changes to Clause 56:07, Integrated Water Management, of the Victoria Planning Provisions \citep{VictoriaStateGovernment2018}. The last scenario, Scenario 3 (designated MAX), is a scenario that tries to maximize the use of WSUD to hopefully obtain 2\SI{}{\degreeCelsius} of cooling. The modelling domain for each Scenario is at a resolution of 30m with a total of 80,000 grid points being used to simulate the suburb. Scenario land covers are shown in Figure \ref{fig:sunburyScenarios} with the area of interest (AOI) highlighted with a black box. 
 
 \begin{figure}[!htbp]
 \centering   
-\fbox{\includegraphics[scale=0.32]{images/Sunbury1.png}}
-\fbox{\includegraphics[scale=0.32]{images/Sunbury2.png}}
+\fbox{\includegraphics[scale=0.25]{images/Sunbury1.png}}
 \\
-\fbox{\includegraphics[scale=0.32]{images/Sunbury3.png}}
-\fbox{\includegraphics[scale=0.32]{images/Sunbury4.png}}
-\caption{\bf WSUD scenarios, showing the top three land covers for each grid cell. a) No WSUD treatments. b) Current levels of WSUD. c) Future targeted levels of WSUD. d) Maximal use of WSUD. Area of interest (AOI) marked with black box. }    
- \label{fig:sunburyScenarios} 
+\fbox{\includegraphics[scale=0.25]{images/Sunbury3.png}}
+\fbox{\includegraphics[scale=0.25]{images/SunburyDiff13.png}}
+\\
+\fbox{\includegraphics[scale=0.25]{images/Sunbury4.png}}
+\fbox{\includegraphics[scale=0.25]{images/SunburyDiff34.png}}
+\caption{\bf WSUD scenarios, showing the top three land covers for each grid cell: a) No WSUD treatments (NONE). b) Future targeted levels of WSUD (FUTURE). c) Maximal use of WSUD (MAX). Area of interest (AOI) marked with black box. WSUD scenarios differences: d) Difference between FUTURE and NONE. e) Difference between MAX and FUTURE. Area of interest (AOI) marked with black box. }    
+ \label{fig:sunburyScenarios}  \label{fig:sunburyDiffScenarios} 
 \end{figure} 
 
+Each WSUD scenario (land cover fractions summarized in Table \ref{tab:parameters}) for the suburb is different due to the makeup of the urban surface, which is fed into the TARGET model. Land surface categories in TARGET include fractions of roof, road, concrete, water bodies, vegetation/trees, dry grass, and irrigated grass. The proportion of irrigated grass and vegetation are higher and dry grass fraction is lower in Scenario MAX compared to Scenario NONE due to more WSUD in the landscape. The average fractions of the land surface categories add up to more than 1 for the scenarios (Table \ref{tab:parameters}), but for each individual grid point, the sum of the fractions is 1. Differences in land cover between scenarios are shown in Figure  \ref{fig:sunburyDiffScenarios} and summarised in Table \ref{tab:parametersDiff}. Details of the area of interest (AOI) are shown in Figure  \ref{fig:sunburyScenariosAOI}.
 
 \begin{figure}[!htbp]
-\centering   
-
-\fbox{\includegraphics[scale=0.21]{images/SunburyDiff12.png}}
-\fbox{\includegraphics[scale=0.21]{images/SunburyDiff13.png}}
-\fbox{\includegraphics[scale=0.21]{images/SunburyDiff14.png}}
-\caption{\bf WSUD scenarios differences. a) Difference between Current levels and No WSUD treatments. b) Difference between Future Targeted levels and No WSUD treatments. c) Difference between Maximal use of WSUD and No WSUD treatments. Area of interest (AOI) marked with black box.}    
- \label{fig:sunburyDiffScenarios} 
-\end{figure} 
-
-
-Each WSUD scenario (land cover fractions summarized in Table \ref{tab:parameters}) for the suburb is different due to the makeup of the urban surface, which is fed into the TARGET model. Land surface categories in TARGET include fractions of roof, road, concrete, water bodies, vegetation/trees, dry grass, and irrigated grass. The proportion of irrigated grass and vegetation are higher and dry grass fraction is lower in Scenario 4 compared to Scenario 2 due to more WSUD in the landscape. The average fractions of the land surface categories add up to more than 1 for the scenarios (Table \ref{tab:parameters}), but for each individual grid point, the sum of the fractions is 1. Differences in land cover between scenarios are shown in Figure  \ref{fig:sunburyDiffScenarios} and summarised in Table \ref{tab:parametersDiff}. Details of the area of interest (AOI) are shown in Figure  \ref{fig:sunburyScenariosAOI}.
-
-% this is absolute differences
-%roof	-15.24	-187.44	-1195.27	
-%road	-1.96	-61.43	-112.07	
-%water	506.93	1213.35	1213.35	
-%concrete	-1.63	-2.54	-8.83	
-%tree	0.0	250.29	1079.54	
-%grass	-417.92	-1969.61	-2464.8	
-%irrigated	-70.16	757.39	1488.09	
-
-% this is percent differences
-%roof	-0.0188	-0.2318	-1.4785	
-%road	-0.0024	-0.076	-0.1386	
-%water	0.627	1.5009	1.5009	
-%concrete	-0.002	-0.0031	-0.0109	
-%tree	0.0	0.3096	1.3354	
-%grass	-0.5169	-2.4364	-3.0489	
-%irrigated	-0.0867	0.9369	1.8407	
-
-%total percentages
-%roof	12.9752	12.9563	12.7433	11.4966	
-%road	7.6683	7.6659	7.5923	7.5296	
-%water	0.0	0.627	1.5009	1.5009	
-%concrete	2.6218	2.6198	2.6186	2.6109	
-%tree	0.2399	0.2399	0.5495	1.5753	
-%grass	73.5149	72.9979	71.0784	70.4659	
-%irrigated	2.9797	2.8929	3.9166	4.8205	
-
-% try masking out grasslands and try differences again
-%AOI values
-
-%318.14584404591056	183.69740089902018	0.0	89.25138433818161	6.043718504443156	75.08841841800485	29.77323379441851	
-%318.6657635272028	183.78820413086623	0.0	89.17043468002791	6.043718504443156	81.50482734368451	22.82705181375537	
-%311.6462512803366	180.70217679907205	0.0	88.54746783989569	13.859440828844283	42.16584142060522	65.07882183123168	
-%284.6639096711316	179.7774483975391	0.0	88.0382977768607	40.20303209139302	12.725766194729001	96.59154586835834	
-%roof	0.51	-6.49	-33.48	
-%road	0.09	-2.99	-3.91	
-%water	0.0	0.0	0.0	
-%concrete	-0.08	-0.7	-1.21	
-%tree	0.0	7.81	34.15	
-%grass	6.41	-32.92	-62.36	
-%irrigated	-6.94	35.3	66.81
-	
-%roof	0.0799	-0.9999	-5.151	
-%road	0.0139	-0.4608	-0.603	
-%water	0.0	0.0	0.0	
-%concrete	-0.0124	-0.1082	-0.1866	
-%tree	0.0	1.2024	5.2552	
-%grass	0.9871	-5.065	-9.5942	
-%irrigated	-1.0686	5.4316	10.2797	
-
-%total percentages
-%roof	48.9455	49.0255	47.9455	43.7944	
-%road	28.2611	28.2751	27.8003	27.658	
-%water	0.0	0.0	0.0	0.0	
-%concrete	13.7309	13.7185	13.6226	13.5443	
-%tree	0.9298	0.9298	2.1322	6.185	
-%grass	11.552	12.5392	6.487	1.9578	
-%irrigated	4.5804	3.5118	10.0121	14.8602	
-
-
-%total percentages
-%roof	12.9752	12.9563	12.7433	11.4966	
-%road	7.6683	7.6659	7.5923	7.5296	
-%water	0.0	0.627	1.5009	1.5009	
-%concrete	2.6218	2.6198	2.6186	2.6109	
-%tree	0.2399	0.2399	0.5495	1.5753	
-%grass	73.5149	72.9979	71.0784	70.4659	
-%irrigated	2.9797	2.8929	3.9166	4.8205	
-
-%total percentages
-%roof	48.9455	49.0255	47.9455	43.7944	
-%road	28.2611	28.2751	27.8003	27.658	
-%water	0.0	0.0	0.0	0.0	
-%concrete	13.7309	13.7185	13.6226	13.5443	
-%tree	0.9298	0.9298	2.1322	6.185	
-%grass	11.552	12.5392	6.487	1.9578	
-%irrigated	4.5804	3.5118	10.0121	14.8602	
-
-
-\begin{figure}[!htbp]
-\centering   
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/Sunbury1.png}}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/Sunbury2.png}}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/Sunbury3.png}}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/Sunbury4.png}}
-%\includegraphics[scale=0.35,trim = 0mm 0mm 155mm 96mm,clip]{images/SunburyDiff14_Small.png}
+\begin{center}
+a)\fbox{\includegraphics[scale=1.9,trim = 124.62mm 71.0mm 99.8mm 77.5mm,clip]{images/Sunbury1.png}}
+b)\fbox{\includegraphics[scale=1.9,trim = 124.62mm 71.0mm 99.8mm 77.5mm,clip]{images/Sunbury3.png}}
+c)\fbox{\includegraphics[scale=1.9,trim = 124.62mm 71.0mm 99.8mm 77.5mm,clip]{images/Sunbury4.png}}
 \\
-\includegraphics[scale=0.43,trim = 0mm 0mm 155mm 96mm,clip]{images/SunburyDiff14_Small.png}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff12_Small.png}}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff13_Small.png}}
-\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff14_Small.png}}
-\\ a) ~~~~~~~~~~~~~~~~~~~~~~~~~~~    b)   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  c) ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  d)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\caption{\bf (Top) WSUD scenarios, showing the top three land covers for each grid cell from AOI black boxed region of Figure \ref{fig:sunburyScenarios}. a) No WSUD treatments. b) Current levels of WSUD. c) Future targeted levels of WSUD. d) Maximal use of WSUD. 
-(Bottom) WSUD scenarios differences from AOI black boxed region of Figure \ref{fig:sunburyDiffScenarios}. b) Difference between Current levels and No WSUD treatments. c) Difference between Future Targeted levels and No WSUD treatments. d) Difference between Maximal use of WSUD and No WSUD treatments.}    
+~~ \includegraphics[scale=0.43,trim = 0mm 0mm 155mm 96mm,clip]{images/SunburyDiff14_Small.png}
+d)\fbox{\includegraphics[scale=1.9,trim = 124.62mm 71.0mm 99.8mm 77.5mm,clip]{images/SunburyDiff13_Small.png}}
+e)\fbox{\includegraphics[scale=1.9,trim = 124.62mm 71.0mm 99.8mm 77.5mm,clip]{images/SunburyDiff34_Small.png}}
+\end{center}
+\caption{\bf WSUD scenarios, showing the top three land covers for each grid cell from AOI black boxed region of Figure \ref{fig:sunburyScenarios}: a) NONE. b) FUTURE. c) MAX. WSUD scenarios differences from AOI black boxed region of Figure \ref{fig:sunburyDiffScenarios}: d) Difference between FUTURE and NONE. e) Difference between MAX and FUTURE.}    
  \label{fig:sunburyScenariosAOI} 
 \end{figure} 
 
 
-%\begin{figure}[!htbp]
-%\centering   
-%\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff12_Small.png}}
-%\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff13_Small.png}}
-%\fbox{\includegraphics[scale=1.9,trim = 124.5mm 70.5mm 98.9mm 76.5mm,clip]{images/SunburyDiff14_Small.png}}
-%\includegraphics[scale=0.35,trim = 0mm 0mm 155mm 96mm,clip]{images/SunburyDiff14_Small.png}
-%\\ a)      b)   c)
-%\caption{\bf WSUD AOI scenarios differences. a) Difference between Current levels and No WSUD treatments. b) Difference between Future Targeted levels and No WSUD treatments. c) Difference between Maximal use of WSUD and No WSUD treatments. }    
-% \label{fig:sunburyDiffScenariosAOI} 
-%\end{figure} 
-
-
 \begin{table}[!htbp]
 \caption{\bf Land cover fractions for each WSUD scenario (in \%) \label{tab:parameters}}     
-\begin{tabular}{ l l l l l l l l l}
-  \hline  \textbf{Land surface category } &  \multicolumn{4}{|c|}{\textbf{Full domain scenarios}} & \multicolumn{4}{c|}{\textbf{AOI scenarios}}  \\ 
-\textbf{} & \textbf{1} & \textbf{2}  & \textbf{3} & \textbf{4}& \textbf{1} & \textbf{2}  & \textbf{3} & \textbf{4}\\ \hline
-Roof fraction & 	13.0&	13.0&	12.7&	11.5&	48.9&	49.0&	47.9&	43.8 \\ 
-Road fraction & 7.7&	7.7&	7.6&	7.5	&	28.3&	28.3&	27.8&	27.7 \\ 
-Concrete fraction & 	2.6&	2.6&	2.6&	2.6	&	13.7&	13.7&	13.6&	13.5 \\ 
-Water fraction & 	0.0&	0.6&	1.5&	1.5	&	0.0&	0.0&	0.0&	0.0	 \\ 
-Vegetation/tree fraction & 	0.2&	0.2&	0.5&	1.6	&	0.9&	0.9&	2.1&	6.2	 \\ 
-Dry grass fraction & 73.5&	73.0&	71.1&	70.5&		11.6&	12.5&	6.5&	1.9	 \\ 
-Irrigated grass fraction & 	3.0	&2.9&	3.9&	4.8	&	4.6&	3.5&	10.0&	14.9 \\ 
+\begin{tabular}{ l l l l l l l}
+  \hline  \textbf{Land surface category fractions } &  \multicolumn{3}{|c|}{\textbf{Full domain scenarios}} & \multicolumn{3}{c|}{\textbf{AOI scenarios}}  \\ 
+\textbf{} & \textbf{NONE} & \textbf{FUTURE}  & \textbf{MAX} & \textbf{NONE} & \textbf{FUTURE}  & \textbf{MAX} \\ \hline
+Roof  & 	13.0&		12.7&	11.5&	48.9&		47.9&	43.8 \\ 
+Road  & 7.7&	7.6&	7.5	&	28.3&		27.8&	27.7 \\ 
+Concrete  & 	2.6&	2.6&	2.6	&	13.7&		13.6&	13.5 \\ 
+Water  & 	0.0&	1.5&	1.5	&	0.0&		0.0&	0.0	 \\ 
+Vegetation/tree  & 	0.2&	0.5&	1.6	&	0.9&		2.1&	6.2	 \\ 
+Dry grass  & 73.5&	71.1&	70.5&		11.6&		6.5&	1.9	 \\ 
+Irrigated grass  & 	3.0	&	3.9&	4.8	&	4.6&	10.0&	14.9 \\ 
 \hline
 \end{tabular}
 \end{table}
@@ -408,19 +304,17 @@ Irrigated grass fraction & 	3.0	&2.9&	3.9&	4.8	&	4.6&	3.5&	10.0&	14.9 \\
 
 
 \begin{table}[!htbp]
-\caption{\bf Land cover fractions differences for each WSUD scenario ( \% difference)  \label{tab:parametersDiff}}     
-\begin{tabular}{ l l l l l l l }
-
-  \hline  \textbf{Land surface category } &  \multicolumn{3}{|c|}{\textbf{Full domain scenario differences}} & \multicolumn{3}{c|}{\textbf{AOI scenario differences}}  \\ 
-
-\textbf{} & \textbf{1$\rightarrow$2} & \textbf{ 1$\rightarrow$3}  & \textbf{1$\rightarrow$4}& \textbf{1$\rightarrow$2} & \textbf{ 1$\rightarrow$3}  & \textbf{1$\rightarrow$4}  \\ \hline
-Roof	&-0.02&	-0.2&	-1.5	&0.08&	-1.0&	-5.2\\		
-Road	&-0.002&	-0.08&	-0.1&0.01&	-0.5&	-0.6\\		
-Concrete	&-0.002&	-0.003&	-0.01&-0.01&	-0.1&	-0.2	\\	
-Water	&0.6&	1.5&	1.5	&0.0&	0.0&	0.0	\\
-Vegetation/tree 	&0.0&	0.3&	1.3		&0.0&	1.2&	5.3	\\
-Dry grass &-0.5&	-2.4&	-3.0		&1.0&	-5.1&	-9.6\\
-Irrigated grass	&-0.07&	0.9&	1.8	&-1.1&	5.4&	10.3\\	
+\caption{\bf Land cover fractions differences for each WSUD scenario (\% difference)  \label{tab:parametersDiff}}     
+\begin{tabular}{ l l l l l }
+\hline  \textbf{Land surface category } &  \multicolumn{2}{|c|}{\textbf{Full domain scenario differences}} & \multicolumn{2}{c|}{\textbf{AOI scenario differences}}  \\ 
+\textbf{} & \textbf{NONE$\rightarrow$FUTURE}   & \textbf{NONE$\rightarrow$MAX}& \textbf{NONE$\rightarrow$FUTURE} &  \textbf{NONE$\rightarrow$MAX}  \\ \hline
+Roof	&-0.02&-1.5&0.08&-5.2\\		
+Road	&-0.002&-0.1&0.01&-0.6\\		
+Concrete&-0.002&-0.01&-0.01&-0.2\\	
+Water	&0.6&1.5&0.0&0.0\\
+Vegetation/tree &0.0&1.3&0.0&5.3\\
+Dry grass &-0.5&-3.0&1.0&-9.6\\
+Irrigated grass	&-0.07&1.8&-1.1&10.3\\	
 \hline
 \end{tabular}
 \end{table}
@@ -434,26 +328,35 @@ Irrigated grass	&-0.07&	0.9&	1.8	&-1.1&	5.4&	10.3\\
 
 \subsection{Climate Scenarios}\label{sec:methods_climate_scenarios}
 
-Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$). Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
+Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$) These are shown in Figure \ref{fig:sunburyforcing}. Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
 
 \begin{table}[!htbp]
 \caption{\bf Historical meteorological data used to construct different summer climate scenarios.  \label{tab:dates}}     
 \begin{tabular}{ l l}
 \textbf{Scenario} & \textbf{Dates}\\ \hline
-Cool & 01/02/2005, 10/02/2009, 08/02/2012 \\ 
-Average & 02/01/2011, 05/01/2011, 02/01/2011 \\ 
-Extreme & 06/01/2009, 06/01/2009, 07/01/2009 \\ 
+Cool & 01 Feb 2005, 10 Feb 2009, 08 Feb 2012 \\ 
+Average & 02 Jan 2011, 05 Jan 2011, 02 Jan 2011 \\ 
+Extreme & 06 Jan 2009, 06 Jan 2009, 07 Jan 2009 \\ 
 \hline
 \end{tabular}
 \end{table}
 
-In total, 12 scenarios were run, combining every permutation of the four WSUD scenarios and three climate scenarios.
+In total, 9 scenarios were run, combining every permutation of the three WSUD scenarios and three climate scenarios.
+
+\begin{figure}[!htbp]
+\centering   
+a)\includegraphics[scale=0.14]{images/Ta.png}
+b)\includegraphics[scale=0.14]{images/RH.png}
+\\
+c)\includegraphics[scale=0.14]{images/Kd.png}
+d)\includegraphics[scale=0.14]{images/WS.png}
+
+\caption{\bf Forcing values for three climate scenarios. }    
+ \label{fig:sunburyforcing} 
+\end{figure} 
 
 
-%\subsection{Economic analysis}\label{sec:methods_econ}
-%TODO
-%
-%An economic model was created.
+
 
 \section{Evaluation and scenario results and discussion}
 
