@@ -233,16 +233,29 @@ Finally, the Universal Thermal Climate Index (\glssymbol{UTCI}) (\SI{}{\degreeCe
 An evaluation of the new \glssymbol{UTCI} and \glssymbol{Tmrt} calculations was performed using observations of \glssymbol{Tmrt} and \glssymbol{UTCI} recorded in George St. and Gipps St. in the City of Melbourne \citep{Coutts2015}. The evaluation procedure repeats the procedure fully described in Section 3.2.1 of \cite{Nice2018} and Section 5.3 of \cite{Nice2016}. But briefly, observations in \cite{Coutts2015} were made of two contrasting street canyons, Gipps St. (designated OPN), a street with an open canopy (12\% plan area canopy cover), and George St. (designated TRD), a treed canyon (45\% plan area canopy cover). Seven stations in these two streets recorded air temperature, wind speed, humidity, incoming shortwave radiation, and black globe temperatures for 21 months in 2011-13. These readings were used to calculate the observed values of \glssymbol{Tmrt} and \glssymbol{UTCI}. 
 
 
-Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and run for 29 days from 1-29 February 2012, forced by the observations from the observation station OPN1. The period contained a number of hot days (see Figure \ref{fig:CoMtemp}) and no days with precipitation.
+Two TARGET scenarios were constructed (designated GeorgeEvaluation and GippsEvaluation) and run for 29 days from 1-29 February 2012, forced by the observations from the observation station OPN1. Overview of modelling area and observation station locations are shown in Figure \ref{fig:GeorgeGippsSt}. The period contained a number of hot days (see Figure \ref{fig:CoMtemp}) and no days with precipitation.
 
+\begin{figure}[!htbp] 
+\center
+\includegraphics[trim = 0mm 0mm 0mm 0mm, clip, scale=0.69]{images/CoMOverview.png}
+\\
+\includegraphics[trim = 0mm 0mm 0mm 6mm, clip, scale=0.35]{images/GippsStCrop.png}
+\includegraphics[trim = 0mm 0mm 0mm 0mm, clip, scale=0.33]{images/GeorgeStCrop.png}~
+\caption{Overview of observed City of Melbourne locations: Gipps St. (OPN), outlined in red, and George St. (TRD), outlined in green. Modelled domains with 3 and 4 comparison observation stations located on Gipps St. (left) and George St. (right). Adapted from \cite{GooglePreston2015}.
+\label{fig:GeorgeGippsSt} 
+} 
+\end{figure}
 
 \begin{figure}[!htbp]
+\center
 \includegraphics[trim = 0mm 0mm 0mm 0mm, clip, scale=0.30]{images/CoMTempFeb2012.png}
 \caption{Daily maximum, minimum, and mean air temperature observations of Gipps/George St. during the evaluation period of 1-29 Feburary 2012.\label{fig:CoMtemp}} 
 \end{figure}
 
 
 Values used include air temperature, relative humidity, and wind speed. Values for incoming longwave and air pressure are taken from Melbourne Airport observations (station 086282, Melbourne Airport) \citep{BOM2016b}. Values for incoming shortwave are taken from one minute solar observations (station 086282, Melbourne Airport) \citep{BOM2016}. Predicted values for \glssymbol{Tmrt} and \glssymbol{UTCI} were extracted from the modelled output and compared to the same locations of the observations. Comparisons with the observations were performed using the \cite{Willmott1981} d index of agreement as well as calculating mean absolute error (MAE), mean bias error (MBE), and root-mean-square error (RMSE) statistics.
+
+
 
 
 % For example, the introduction of flow requirements proposed under BPEM guidelines (investigated as part of scenario 3 proposed changes for IWM regulation) could be achieved through extensive stormwater harvesting or green infrastructure that promotes significant infiltration and evapotranspiration losses.  Climate, soils, terrain, availability of recycled water as an alternative water supply (and drivers for its use) etc. will influence the urban design outcomes and inform the optimal infrastructure arrangement to deliver each scenario.  
@@ -328,7 +341,7 @@ Irrigated grass	&-0.07&1.8&-1.1&10.3\\
 
 \subsection{Climate Scenarios}\label{sec:methods_climate_scenarios}
 
-Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$) These are shown in Figure \ref{fig:sunburyforcing}. Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
+Three different climate scenarios were developed to assess the effectiveness of WSUD under different summer conditions. These include a cool summer day, an average summer day, and an extreme summer day. Half hourly meteorological data from Melbourne Airport weather station (station 086282, Melbourne Airport) \citep{BOM2016b}, the closest weather station to the greenfill area, was used as forcing data for the TARGET model. The meteorological variables used were 2m air temperature (\SI{}{\degreeCelsius}), relative humidity (\%), wind speed (m s$^{-1}$), surface pressure (hPa), total shortwave radiation (W m$^{-2}$), and total longwave radiation (W m$^{-2}$) These are shown in Figure \ref{fig:sunburyforcing}. Three days for each climate scenario (designated Cool, Average and Extreme) were chosen for simulation due with high levels of clear skies to maximize the radiation exposure and heating trends, although there are a few instances in the data of low levels of shortwave during the daytimes. The dates simulated are in Table \ref{tab:dates}, where the Average and Extreme scenarios contain two of the same dates.
 
 \begin{table}[!htbp]
 \caption{\bf Historical meteorological data used to construct different summer climate scenarios.  \label{tab:dates}}     
@@ -341,6 +354,14 @@ Extreme & 06 Jan 2009, 06 Jan 2009, 07 Jan 2009 \\
 \end{tabular}
 \end{table}
 
+% for documentation, data from 
+% select Year,MM,DD,HH24,MI,Mean_global_irradiance_over_1_minute_in_W_sq_m,Mean_direct_irradiance_over_1_minute_in_W_sq_m,Mean_diffuse_irradiance_over_1_minute_in_W_sq_m from Observations where Year =2005 and MM = 2 and DD=1 and (MI=0 or MI=30 ) order by HH24 
+% BOMOBSERVATIONS_SQLITE=/home/kerryn/Documents/Work/Data/BOMMelbourneAdelaideObservations/BOMObservations.sqlite3
+
+%and 
+%  select  "Station Number", "Year Month Day Hours Minutes in YYYY MM DD HH24 MI format in Local standard time", "Precipitation in last 10 minutes in mm", "Air Temperature in degrees C", "Relative humidity in percentage %", "Vapour pressure in hPa", "Wind speed in km/h", "Wind direction in degrees true", "Mean sea level pressure in hPa"  from BOMObservations where  "Station Number"=' 23034'   and ("Year Month Day Hours Minutes in YYYY MM DD HH24 MI format in Local standard time"  like '2005 02 01 %% 00' or "Year Month Day Hours Minutes in YYYY MM DD HH24 MI format in Local standard time"  like '2005 02 01 %% 30' )  order by "Year Month Day Hours Minutes in YYYY MM DD HH24 MI format in Local standard time" 
+% MELBOURNE1MIN30SOLAR_SQLITE=/home/kerryn/Documents/Work/Data/Melbourne-1MinSolar/Melbourne1MinSolar_30Minutes.sqlite3
+
 In total, 9 scenarios were run, combining every permutation of the three WSUD scenarios and three climate scenarios.
 
 \begin{figure}[!htbp]
@@ -351,7 +372,7 @@ b)\includegraphics[scale=0.14]{images/RH.png}
 c)\includegraphics[scale=0.14]{images/Kd.png}
 d)\includegraphics[scale=0.14]{images/WS.png}
 
-\caption{\bf Forcing values for three climate scenarios. }    
+\caption{\bf Forcing values the three days of the three climate scenarios. }    
  \label{fig:sunburyforcing} 
 \end{figure} 
 
@@ -366,18 +387,18 @@ d)\includegraphics[scale=0.14]{images/WS.png}
 Modelled predictions for the George St. observation locations (TRD2, TRD3, TRD4, and TRD5) and Gipps St. observation locations (OPN3, OPN4, and OPN5) were extracted from the results of the GeorgeEvaluation and GippsEvaluation scenarios and compared to the observations for those locations. These are presented in Figures \ref{fig:tmrteval} and \ref{fig:utcieval}. Statistical analysis (RMSE, MBE, MAE, and d index of agreement) for these four and three locations for \glssymbol{Tmrt} and \glssymbol{UTCI} are summarised in Table \ref{tab:georgetmrt}.
 
 \begin{figure}[!htbp]
-a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-Tmrt.png}
+a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-Tmrt_Single.png}
 ~ b)
-\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-Tmrt.png}
+\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-Tmrt_Single.png}
 
 \caption{\bf Comparison of TARGET modelled \glssymbol{Tmrt} to observed locations in a) George St. and b) Gipps St.}    
  \label{fig:tmrteval} 
 \end{figure} 
 
 \begin{figure}[!htbp]
-a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI.png}
+a) \includegraphics[scale=0.15]{images/Eval/GeorgeEvaluation-ErrorPlots-UTCI_Single.png}
 ~ b)
-\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-UTCI.png}
+\includegraphics[scale=0.15]{images/Eval/GippsEvaluation-ErrorPlots-UTCI_Single.png}
 
 \caption{\bf Comparison of TARGET modelled \glssymbol{UTCI} to observed locations in a) George St. and b) Gipps St.}    
  \label{fig:utcieval} 

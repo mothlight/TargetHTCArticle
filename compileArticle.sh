@@ -8,6 +8,13 @@ cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/Georg
 cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tmrt.png images/Eval
 cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tair.png images/Eval
 
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-UTCI_Single.png images/Eval
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GeorgeEvaluation-ErrorPlots-Tair_Single.png images/Eval
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GeorgeEvaluation-ErrorPlots-UTCI_Single.png images/Eval
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GeorgeEvaluation-ErrorPlots-Tmrt_Single.png images/Eval
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tmrt_Single.png images/Eval
+cp -u /home/kerryn/Documents/Work/Toolkit2-Runs/CoMUTCIValidation/Analysis/GippsEvaluation-ErrorPlots-Tair_Single.png images/Eval
+
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_AOI.png images/temperatures
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll.png images/temperatures
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Code/SunburyAll_UTCI.png images/temperatures
@@ -41,6 +48,13 @@ cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/Kd.png imag
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/RH.png images/
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/Ta.png images/
 cp -u /home/kerryn/git/2018-03-TargetHtcArticle/Data/ScenarioWeather/WS.png images/
+
+cp -u /home/kerryn/git/2016-10-VTUF3DDesignArticle/images/CoMGippsGeorgeStArea3.png  images/
+cp -u /home/kerryn/git/2016-10-VTUF3DDesignArticle/images/Gipp200x200_5mgrid_heights2.png  images/
+cp -u /home/kerryn/git/2016-10-VTUF3DDesignArticle/images/GeorgeSt-100x100m-5m_grid_heights2.png  images/
+cp -u /home/kerryn/Documents/Work/Data/CityOfMelbourne2011-12/Gipps200x200.png images/
+cp -u /home/kerryn/Documents/Work/Data/CityOfMelbourne2011-12/George200x200.png images/
+
 
 rm TargetHtc.glsdefs
 bibtex TargetHtc.aux
